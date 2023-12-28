@@ -6,6 +6,8 @@ public class Personnage {
     private Arme arme;
     private int pieces;
 
+    private Room positionActuelle;
+
     /** Constructeur*/
     public Personnage(String nom){
         this.nom = nom;
