@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class Personnage {
 
     /** Variables d'instance */
