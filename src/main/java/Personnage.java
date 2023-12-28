@@ -8,7 +8,7 @@ public class Personnage {
 
     /** Constructeur*/
     public Personnage(String nom){
-        this.nom=nom;
+        this.nom = nom;
         this.barreDeVie = 100;
         this.pieces = 0;
     }
