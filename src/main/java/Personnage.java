@@ -5,17 +5,17 @@ public class Personnage {
     private int barreDeVie;
     private Arme arme;
     private int pieces;
+    private static final int SANTE_MAXIMALE = 100;
     private Piece positionActuelle;
 
     /** CONSTRUCTEUR */
     public Personnage(String nom){
         this.nom = nom;
-        this.barreDeVie = 100;
+        this.barreDeVie = SANTE_MAXIMALE;
         this.pieces = 0;
     }
 
-    /** SETTER*/
-    /** Obtenir le nom du joueur*/
+    /** GETTER */
     public String getNomJoueur() {
         return nom;
     }
@@ -32,9 +32,17 @@ public class Personnage {
         return positionActuelle;
     }
 
+
     /** SETTER */
     public void setBarreDeVie(int barreDeVie) {
-        this.barreDeVie = barreDeVie;
+        if (barreDeVie > SANTE_MAXIMALE) {
+            this.barreDeVie = SANTE_MAXIMALE;
+        } else if (barreDeVie <= 0) {
+            this.barreDeVie = 0;
+            System.out.println(nom + " est mort !");
+        } else {
+            this.barreDeVie = barreDeVie;
+        }
     }
     public void setArme(Arme arme) {
         this.arme = arme;
@@ -42,6 +50,10 @@ public class Personnage {
     public void setPorteMonnaie(int pieces) {
         this.pieces = pieces;
     }
+    public void setPositionActuelle(Piece positionActuelle) {
+        this.positionActuelle = positionActuelle;
+    }
+
 
 }
 

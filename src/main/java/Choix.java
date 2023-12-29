@@ -6,9 +6,9 @@ public class Choix {
     private String description;
     private List<Action> actions;
 
-    public Choix (String description, Action action1, Action action2){
+    public Choix (String description, Action ... actions){
         this.description = description;
-        this.actions = Arrays.asList(action1,action2);
+        this.actions = Arrays.asList(actions);
     }
 
     public String getDescription() {

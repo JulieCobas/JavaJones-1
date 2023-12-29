@@ -1,4 +1,4 @@
-public class Action4_AcheterArme implements Action{
+public class Action4_AcheterArme implements Action {
 
     private Arme arme;
 
@@ -11,7 +11,7 @@ public class Action4_AcheterArme implements Action{
         if (personnage.getPorteMonnaie() >= arme.getCout()) {
             personnage.setArme(arme);
             personnage.setPorteMonnaie(personnage.getPorteMonnaie() - arme.getCout());
-            System.out.println("Vous avez acheté l'arme " + arme.getNom() + " pour " + arme.getCout() + " pièces.");
+            System.out.println("Vous avez acheté une nouvelle arme : " + arme.getNom());
         } else {
             System.out.println("Vous n'avez pas assez de pièces pour acheter l'arme " + arme.getNom() + ".");
         }
