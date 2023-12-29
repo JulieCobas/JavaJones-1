@@ -13,6 +13,8 @@ public class Jeu {
         /** Création du joueur */
         String nomJoueur = scanner.nextLine().trim().toLowerCase();
         Personnage joueur = new Personnage(nomJoueur);
+        joueur.getBarreDeVie();
+        joueur.getPorteMonnaie();
 
         /** Message de confirmation du joueur */
         System.out.println("\nBienvenue dans la quête " + joueur.getNomJoueur());

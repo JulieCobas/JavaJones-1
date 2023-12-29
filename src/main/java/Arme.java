@@ -1,4 +1,4 @@
-public abstract class Arme {
+public class Arme {
 
     /** Variables d'instance*/
     protected String nom;
@@ -11,20 +11,17 @@ public abstract class Arme {
         this.degats = degats;
         this.cout = cout;
     }
-    /** Utiliser arme*/
-    public abstract void utiliser();
 
-    /** Nom de l'arme */
+    /** SETTER */
+    public void utiliser(){};
+
+    /** GETTER */
     public String getNom(){
         return nom;
     }
-
-    /** Infliger des dégats */
     public int getDegats(){
         return degats;
     }
-
-    /** Coût d'achat de l'arme*/
     public int getCout(){
         return cout;
     }

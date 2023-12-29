@@ -7,10 +7,6 @@ public class Piece {
     private String description;
     private int numeroPiece;
     private List<Choix> choixList;
-    private Piece pieceGauche;
-    private Piece pieceDroite;
-    private Piece pieceToutDroit;
-    private Piece pieceRetourEnArriere;
     private boolean estPieceDuBoss;
 
     /** CONSTRUCTEUR */
@@ -22,18 +18,12 @@ public class Piece {
     }
 
     /** GETTER */
-    public String getDescription() {
-        return description;
-    }
-
     public String getDescriptionPiece() {
         return description;
     }
-
     public int getNumeroPiece(){
         return numeroPiece;
     }
-
     public List<Choix> getChoixList() {
         return choixList;
     }
@@ -50,30 +40,5 @@ public class Piece {
         for (int i = 0; i < choixList.size(); i++){
             System.out.println((i+1) + "." + choixList.get(i).getDescription());
         }
-    }
-    /** DEPLACEMENTS*/
-    public void setPieceGauche(Piece pieceGauche) {
-        this.pieceGauche = pieceGauche;
-    }
-    public void setPieceDroite(Piece pieceDroite) {
-        this.pieceDroite = pieceDroite;
-    }
-    public void setPieceToutDroit(Piece pieceToutDroit) {
-        this.pieceToutDroit = pieceToutDroit;
-    }
-    public void setPieceRetourEnArriere(Piece pieceRetourEnArriere) {
-        this.pieceRetourEnArriere = pieceRetourEnArriere;
-    }
-    public Piece getPieceGauche() {
-        return pieceGauche;
-    }
-    public Piece getPieceDroite() {
-        return pieceDroite;
-    }
-    public Piece getPieceToutDroit() {
-        return pieceToutDroit;
-    }
-    public Piece getPieceRetourEnArriere() {
-        return pieceRetourEnArriere;
     }
 }
