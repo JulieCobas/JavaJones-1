@@ -33,7 +33,6 @@ public class Action3_Combattre implements Action {
                 System.out.println("Choix non valide, veuillez réessayer.");
             }
         }
-        scanner.close();
     }
 
 }
