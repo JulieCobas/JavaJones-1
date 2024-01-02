@@ -29,11 +29,11 @@ public class Labyrinthe {
         Action sante4 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 60);
 
         //Création des coffres
-        Action coffre1 = new Action2_OuvrirTresor("Vous avez trouver un trésor !", 5);
-        Action coffre2 = new Action2_OuvrirTresor("Vous avez trouver un trésor !", 10);
-        Action coffre3 = new Action2_OuvrirTresor("Vous avez trouver un trésor !", 20);
-        Action coffre4 = new Action2_OuvrirTresor("Vous avez trouver un trésor !", 50);
-        Action coffre5 = new Action2_OuvrirTresor("Vous avez trouver un trésor !", 100);
+        Action coffre1 = new Action2_OuvrirTresor(new Coffre("Vous avez trouver un trésor", 5));
+        Action coffre2 = new Action2_OuvrirTresor(new Coffre("Vous avez trouver un trésor", 10));
+        Action coffre3 = new Action2_OuvrirTresor(new Coffre("Vous avez trouver un trésor", 20));
+        Action coffre4 = new Action2_OuvrirTresor(new Coffre("Vous avez trouver un trésor", 40));
+        Action coffre5 = new Action2_OuvrirTresor(new Coffre("Vous avez trouver un trésor", 100));
 
         //Création des combats
         Action combat1 = new Action3_Combattre("Combats de serpents", 5);
@@ -67,7 +67,7 @@ public class Labyrinthe {
         Action rien5 = new Action5_Rien("Rien");
         Action rien6 = new Action5_Rien("Rien");
 
-        //Création et ajout des choix aux pièces
+        //Création et ajout des choix aux différentes pièces
         piece1.ajouterChoix(new Choix("Gagner un trésor et combat", coffre1, combat1));
         piece1.ajouterChoix(new Choix("Vie + achat arme", sante1, achatArme3));
         piece1.ajouterChoix(new Choix("Combat + Achat arme", combat2, achatArme4));

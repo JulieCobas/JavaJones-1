@@ -1,16 +1,14 @@
 public class Action3_Combattre implements Action {
 
-    private String descriptionCombat;
-    private int degats;
+    private Ennemi ennemi;
 
-    public Action3_Combattre(String descriptionCombat,int degats) {
-        this.descriptionCombat = descriptionCombat;
-        this.degats = degats;
+    public Action3_Combattre(Ennemi ennemi) {
+        this.ennemi = ennemi;
     }
 
     @Override
     public void exectuer(Personnage personnage) {
-        personnage.setBarreDeVie(personnage.getBarreDeVie()- degats);
-        System.out.println("Vous avez perdu " + degats + " points de vie");
+        personnage.setBarreDeVie(personnage.getBarreDeVie()- ennemi.getDegats());
+        System.out.println("Vous avez perdu " + ennemi.getDegats() + " points de vie");
     }
 }
