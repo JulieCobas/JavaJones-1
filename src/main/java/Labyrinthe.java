@@ -65,7 +65,6 @@ public class Labyrinthe {
 
 
         /** Pièce 1 - L'Entrée maudite */
-
         Action coffre1 = new Action2_OuvrirTresor("Description histoire coffre", gain1);
         Action combat1 = new Action3_Combattre("Description combat ennemi1",ennemi1);
         Action sante1 = new Action1_AugmenterSanter("Vous avez trouver de la vie !",20);
@@ -80,7 +79,6 @@ public class Labyrinthe {
         piece1.ajouterChoix(new Choix("Rien", rien1));
 
         /** Pièce 2 - La Chambre des ombres chuchotantes */
-
         Action sante2 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 30);
         Action achatArme5 = new Action4_AcheterArme("Description achat5",arme5);
         Action rien2 = new Action5_Rien("Rien");
