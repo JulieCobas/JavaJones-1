@@ -12,9 +12,6 @@ public class Arme {
         this.cout = cout;
     }
 
-    /** SETTER */
-    public void utiliser(){};
-
     /** GETTER */
     public String getNom(){
         return nom;
