@@ -16,11 +16,5 @@ public class Coffre {
         return piecesGagnees;
     }
 
-    public void setDescriptionCoffre(String descriptionCoffre) {
-        this.descriptionCoffre = descriptionCoffre;
-    }
-
-    public void setPiecesGagnees(int piecesGagnees) {
-        this.piecesGagnees = piecesGagnees;
-    }
 }
+
