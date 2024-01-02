@@ -26,11 +26,4 @@ public class Ennemi {
         this.ennemiVie = ennemiVie;
     }
 
-    public void setDegats(int degats) {
-        this.degats = degats;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
 }
