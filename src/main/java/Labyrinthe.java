@@ -18,12 +18,20 @@ public class Labyrinthe {
     private void initialisation() {
 
         /** Initialisation des pièces */
-        Piece piece1 = new Piece("L'Entrée maudite", 1, false);
-        Piece piece2 = new Piece("La Chambre des ombres chuchotantes", 2, false);
-        Piece piece3 = new Piece("Le Jardin des statutes", 3, false);
-        Piece piece4 = new Piece("Le Sanctuaire oublié", 4, false);
-        Piece piece5 = new Piece("La Gallerie des Illusions", 5, false);
-        Piece piece6 = new Piece("La Salle du Trône du Gardien", 6, true);
+        Piece piece1 = new Piece("L'Entrée maudite",
+                "L'air se rafraîchit soudainement alors que vous pénétrez dans L'Entrée Maudite, " +
+                        "une grotte sombre et imposante. Des stalactites pendent du plafond comme d'anciens " +
+                        "gardiens de pierre, et chaque goutte d'eau qui tombe résonne dans l'obscurité, " +
+                        "telle une horloge égrenant le temps oublié. Le sol est irrégulier, parsemé de roches " +
+                        "et de fossiles, témoins silencieux d'un passé lointain. Des ombres dansent sur les " +
+                        "parois à la lueur de votre torche, suggérant des formes et des mouvements furtifs.",
+                1, false);
+
+        Piece piece2 = new Piece("La Chambre des ombres chuchotantes", "",2, false);
+        Piece piece3 = new Piece("Le Jardin des statutes", "", 3, false);
+        Piece piece4 = new Piece("Le Sanctuaire oublié", "",4, false);
+        Piece piece5 = new Piece("La Galerie des Illusions","" ,5, false);
+        Piece piece6 = new Piece("La Salle du Trône du Gardien","", 6, true);
 
 
         /** Création des coffres */
@@ -37,9 +45,9 @@ public class Labyrinthe {
         /** Création d'ennemis */
         Ennemi ennemi1 = new Ennemi("Combats de serpents", 5, 5);
         Ennemi ennemi2 = new Ennemi("Combat de fantômes ", 10, 10);
-        Ennemi ennemi3 = new Ennemi("Pièges au mur", 0, 20);
+        Ennemi ennemi3 = new Ennemi("Pièges au mur", 0, 20); //A MODIFIER
         Ennemi ennemi4 = new Ennemi("Chauves-souris hurlantes", 10, 20);
-        Ennemi ennemi5 = new Ennemi("Tomber dans une cave", 0, 25);
+        Ennemi ennemi5 = new Ennemi("Tomber dans une cave", 0, 25); // A MODIFIER
         Ennemi ennemi6 = new Ennemi("Combat de nains agressifs", 25, 30);
         Ennemi ennemi7 = new Ennemi("Combat d'hommes en feu", 20, 25);
         Ennemi ennemi8 = new Ennemi("Araignées géantes", 30, 45);
@@ -47,7 +55,6 @@ public class Labyrinthe {
 
 
         /** Création des armes */
-
         Arme arme3 = new Arme("Parapluie", 8, 3);
         Arme arme4 = new Arme("Baguette Magique", 10, 5);
         Arme arme5 = new Arme("Arme5", 15, 10);

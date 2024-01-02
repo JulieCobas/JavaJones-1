@@ -54,6 +54,27 @@ public class Personnage {
         this.positionActuelle = positionActuelle;
     }
 
+    public void afficherEtat() {
+        String barreDeVie = String.format("SANTE: %d", getBarreDeVie());
+        String infoArme = String.format("ARME: %s", getArme().getNom());
+        String degatsArme = String.format("DEGATS: %d", getArme().getDegats());
+
+        String etat = String.join(" | ", "\uD83E\uDD20", barreDeVie, infoArme, degatsArme);
+        System.out.println("\n+--------------------------------------+");
+        System.out.println("| " + etat);
+        System.out.println("+--------------------------------------+\n");
+    }
+
+    public void seDeplacer(int numeroPiece, Labyrinthe labyrinthe) {
+        Piece pieceDestination = labyrinthe.getPiece(numeroPiece);
+        if (pieceDestination != null && this.positionActuelle.estConnecteeAvec(pieceDestination)) {
+            this.positionActuelle = pieceDestination;
+            System.out.println("Vous êtes maintenant dans : " + pieceDestination.getNomPiece());
+            pieceDestination.afficherDescriptionPiece();
+        } else {
+            System.out.println("Déplacement impossible vers la pièce " + numeroPiece);
+        }
+    }
 
 }
 

@@ -1,9 +1,9 @@
 public class Arme {
 
     /** Variables d'instance*/
-    protected String nom;
-    protected int degats;
-    protected int cout;
+    private String nom;
+    private int degats;
+    private int cout;
 
     /** Constructeur*/
     public Arme(String nom,int degats, int cout){

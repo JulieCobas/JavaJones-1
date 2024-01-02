@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Piece {
 
     /** VARIABLES D'INSTANCE */
+    private String nom;
     private String description;
     private int numeroPiece;
     private List<Choix> choixList;
@@ -11,7 +13,8 @@ public class Piece {
     private List<Piece> connexions; // Ajout pour gérer les connexions
 
     /** CONSTRUCTEUR */
-    public Piece(String description, int numeroPiece, boolean estPieceDuBoss) {
+    public Piece(String nom, String description, int numeroPiece, boolean estPieceDuBoss) {
+        this.nom = nom;
         this.description = description;
         this.numeroPiece = numeroPiece;
         this.choixList = new ArrayList<>();
@@ -20,7 +23,11 @@ public class Piece {
     }
 
     /** GETTER */
-    public String getDescriptionPiece() {
+    public String getNomPiece() {
+        return nom;
+    }
+
+    public String getDescription() {
         return description;
     }
 
@@ -53,4 +60,39 @@ public class Piece {
     public boolean estConnecteeAvec(Piece autrePiece) {
         return connexions.contains(autrePiece);
     }
+
+    public void afficherDescriptionPiece() {
+        // Affiche le nom de la pièce
+        System.out.println("+--------------------------------------+");
+        System.out.println("|       " + getNomPiece() + "         |");
+        System.out.println("+--------------------------------------+\n");
+
+        // Divise la description en segments plus courts
+        String[] lignesDescription = getDescription().split(", ");
+        for (String ligne : lignesDescription) {
+            System.out.println(ligne.trim());
+        }
+        System.out.println();
+    }
+
+    public void afficherChoixPiece() {
+        System.out.println("\nCertains choix s'offrent à vous : ");
+        for (int i = 0; i < choixList.size(); i++) {
+            System.out.println((i + 1) + ". " + choixList.get(i).getDescription());
+        }
+    }
+
+    public Choix demanderChoixJoueur(Scanner scanner){
+        System.out.println("Veuillez choisir une option (entrez le numéro 1/2/3/4)");
+        int choixJoueur = scanner.nextInt();
+        if (choixJoueur > 0 && choixJoueur <= choixList.size()) { // Vérifier si le choix est valide
+            return choixList.get(choixJoueur - 1); // Retourner le choix sélectionné
+        } else {
+            System.out.println("Choix invalide. Veuillez réessayer.");
+            scanner.nextLine(); // Consommer la nouvelle ligne pour éviter une boucle infinie
+            return demanderChoixJoueur(scanner); // Demander à nouveau en cas de choix invalide
+        }
+    }
+
+
 }
