@@ -67,6 +67,8 @@ public class Jeu {
         joueur.afficherEtat();
         labyrinthe.getPiece(1).afficherDescriptionPiece();
         labyrinthe.getPiece(1).afficherChoixPiece();
+
+
         joueur.seDeplacer(labyrinthe);
 
     }
