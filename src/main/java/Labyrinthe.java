@@ -142,9 +142,12 @@ public class Labyrinthe {
         piece6.ajouterChoix(new Choix("Vie", sante8 ));
         piece6.ajouterChoix(new Choix("Rien",rien6));
         piece6.ajouterChoix(new Choix("Combat",combat8));
+        piece6.ajouterChoix(new Choix("Boss", combatBoss));
+
 
         /** Ajout des pièces à la liste */
         pieces.addAll(Arrays.asList(piece1, piece2, piece3, piece4, piece5, piece6));
+
 
         /**  Connexions entre les pièces */
         piece1.ajouterConnexion(piece2);
