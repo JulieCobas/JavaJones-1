@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Personnage {
 
     /** Variables d'instance */
@@ -64,16 +66,8 @@ public class Personnage {
         System.out.println("| " + etat);
         System.out.println("+--------------------------------------+\n");
     }
-
-    public void seDeplacer(int numeroPiece, Labyrinthe labyrinthe) {
-        Piece pieceDestination = labyrinthe.getPiece(numeroPiece);
-        if (pieceDestination != null && this.positionActuelle.estConnecteeAvec(pieceDestination)) {
-            this.positionActuelle = pieceDestination;
-            System.out.println("Vous êtes maintenant dans : " + pieceDestination.getNomPiece());
-            pieceDestination.afficherDescriptionPiece();
-        } else {
-            System.out.println("Déplacement impossible vers la pièce " + numeroPiece);
-        }
+    public void seDeplacer(Labyrinthe labyrinthe){
+        labyrinthe.deplacementJoueur(this);
     }
 
 }

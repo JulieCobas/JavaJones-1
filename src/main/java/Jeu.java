@@ -63,11 +63,11 @@ public class Jeu {
 
         /** Arrivée dans la 1ère salle - obligatoire */
         joueur.setPositionActuelle(labyrinthe.getPiece(1));
-        System.out.println("position :" + joueur.getPositionActuelle().getNomPiece());
+        System.out.println("\n position : " + joueur.getPositionActuelle().getNomPiece());
         joueur.afficherEtat();
         labyrinthe.getPiece(1).afficherDescriptionPiece();
         labyrinthe.getPiece(1).afficherChoixPiece();
-
+        joueur.seDeplacer(labyrinthe);
 
     }
     }

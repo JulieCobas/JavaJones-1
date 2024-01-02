@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Labyrinthe {
 
@@ -158,16 +156,16 @@ public class Labyrinthe {
 
 
         /**  Connexions entre les pièces */
-        piece1.ajouterConnexion(piece2);
-        piece1.ajouterConnexion(piece3);
-        piece2.ajouterConnexion(piece4);
-        piece2.ajouterConnexion(piece1);
-        piece3.ajouterConnexion(piece5);
-        piece3.ajouterConnexion(piece1);
-        piece4.ajouterConnexion(piece2);
-        piece5.ajouterConnexion(piece6);
-        piece5.ajouterConnexion(piece1);
-        piece6.ajouterConnexion(piece5);
+        piece1.ajouterConnexion(piece2);// Droite
+        piece1.ajouterConnexion(piece3); //Gauche
+        piece2.ajouterConnexion(piece4);//Tout droit
+        piece2.ajouterConnexion(piece1);//En arrière
+        piece3.ajouterConnexion(piece5);//Tout droit
+        piece3.ajouterConnexion(piece1);//En arrière
+        piece4.ajouterConnexion(piece2); //En arrière
+        piece5.ajouterConnexion(piece6); //Tout droit
+        piece5.ajouterConnexion(piece1); //En arrière
+        piece6.ajouterConnexion(piece5); //En arrière
     }
 
     public Piece getPiece(int numeroPiece) {
@@ -177,5 +175,61 @@ public class Labyrinthe {
             }
         }
         return null;
+    }
+    public void deplacementJoueur(Personnage joueur){
+        Scanner scanner = new Scanner(System.in);
+        Piece pieceActuelle = joueur.getPositionActuelle();
+        Piece pieceDestination = null;
+        while (true) {
+            System.out.println("Dans quelle direction voulez-vous aller ? (droite/gauche/devant/arrière)");
+            String direction = scanner.nextLine().trim().toLowerCase();
+            switch (direction) {
+                case "droite":
+                    // Déplacement vers la droite
+                    if(pieceActuelle.getNumeroPiece() == 1) {
+                        pieceDestination = getPiece(2);
+                    }
+                    break;
+                case "gauche":
+                    // Déplacement vers la gauche
+                    if(pieceActuelle.getNumeroPiece() == 1) {
+                        pieceDestination = getPiece(3);
+                    }
+                    break;
+                case "devant":
+                    // Déplacement tout droit
+                    if(pieceActuelle.getNumeroPiece() == 2) {
+                        pieceDestination = getPiece(4);
+                    } else if(pieceActuelle.getNumeroPiece() == 3) {
+                        pieceDestination = getPiece(5);
+                    }
+                    break;
+                case "arrière":
+                    // Déplacement en arrière
+                    if(pieceActuelle.getNumeroPiece() == 2 || pieceActuelle.getNumeroPiece() == 3) {
+                        pieceDestination = getPiece(1);
+                    } else if(pieceActuelle.getNumeroPiece() == 4) {
+                        pieceDestination = getPiece(2);
+                    } else if(pieceActuelle.getNumeroPiece() == 5) {
+                        pieceDestination = getPiece(1);
+                    } else if(pieceActuelle.getNumeroPiece() == 6) {
+                        pieceDestination = getPiece(5);
+                    }
+                    break;
+                default:
+                    System.out.println("Direction inconnue. Veuillez réessayer.");
+                    continue;
+            }
+
+            // Déplacement si la destination est valide
+            if (pieceDestination != null && pieceActuelle.estConnecteeAvec(pieceDestination)) {
+                joueur.setPositionActuelle(pieceDestination);
+                System.out.println("Vous êtes maintenant dans : " + pieceDestination.getNomPiece());
+                pieceDestination.afficherDescriptionPiece();
+                break;
+            } else {
+                System.out.println("Déplacement impossible dans cette direction.");
+            }
+        }
     }
 }
