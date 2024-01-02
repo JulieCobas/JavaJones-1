@@ -12,7 +12,7 @@ public class Action2_OuvrirTresor implements Action {
     @Override
     public void exectuer(Personnage personnage) {
         personnage.setPorteMonnaie(personnage.getPorteMonnaie()+ coffre.getPiecesGagnees());
-        System.out.println("Vous avez un coffre de " + coffre.getPiecesGagnees() + " pièces d'or .");
+        System.out.println("\nVous avez trouvé un coffre : " + coffre.getDescriptionCoffre() + ". Il vaut " + coffre.getPiecesGagnees() + " pièces d'or.");
 
     }
 }

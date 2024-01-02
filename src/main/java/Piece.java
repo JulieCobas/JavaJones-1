@@ -49,12 +49,6 @@ public class Piece {
         connexions.add(piece); // Ajouter une pièce à la liste des connexions
     }
 
-    public void afficherChoix(){
-        for (int i = 0; i < choixList.size(); i++){
-            System.out.println((i+1) + ". " + choixList.get(i).getDescription());
-        }
-    }
-
     // Méthode pour vérifier si une pièce est connectée
     public boolean estConnecteeAvec(Piece autrePiece) {
         return connexions.contains(autrePiece);
