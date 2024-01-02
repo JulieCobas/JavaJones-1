@@ -58,8 +58,8 @@ public class Labyrinthe {
         Arme arme11 = new Arme("Arme5", 15, 10);
 
 
-        /** Création des actions et des choix par pièces */
-        // Pièce 1 - L'Entrée maudite
+        /** Pièce 1 - L'Entrée maudite */
+
         Action coffre1 = new Action2_OuvrirTresor("Description histoire coffre", gain1);
         Action combat1 = new Action3_Combattre("Description combat ennemi1",ennemi1);
         Action sante1 = new Action1_AugmenterSanter("Vous avez trouver de la vie !",20);
@@ -73,8 +73,8 @@ public class Labyrinthe {
         piece1.ajouterChoix(new Choix("Combat + Achat arme", combat2, achatArme4));
         piece1.ajouterChoix(new Choix("Rien", rien1));
 
+        /** Pièce 2 - La Chambre des ombres chuchotantes */
 
-        //Pièce 2 - La Chambre des ombres chuchotantes
         Action sante2 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 30);
         Action achatArme5 = new Action4_AcheterArme("Description achat5",arme5);
         Action rien2 = new Action5_Rien("Rien");
@@ -89,7 +89,7 @@ public class Labyrinthe {
         piece2.ajouterChoix(new Choix("Combat + Trésor", combat3, coffre2));
 
 
-        //Piece 3 - Le Jardin des statutes
+        /** Piece 3 - Le Jardin des statutes */
         Action sante4 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 60);
         Action coffre3 = new Action2_OuvrirTresor("Description histoire coffre", gain3);
         Action combat4 = new Action3_Combattre("Description ennemi4",ennemi4);
@@ -102,7 +102,7 @@ public class Labyrinthe {
         piece3.ajouterChoix(new Choix("Achat arme" + achatArme7));
 
 
-        //Piece 4 - Le Sanctuaire oublié
+        /** Piece 4 - Le Sanctuaire oublié */
         Action achatArme8 = new Action4_AcheterArme("Description achat8",arme8);
         Action coffre4 = new Action2_OuvrirTresor("Description histoire coffre", gain4);
         Action combat5 = new Action3_Combattre("Description ennemi4",ennemi5);
@@ -116,7 +116,7 @@ public class Labyrinthe {
         piece4.ajouterChoix(new Choix("Rien", rien4));
 
 
-        //Piece 5 - La Gallerie des Illusions
+        /**  Piece 5 - La Gallerie des Illusions */
         Action rien5 = new Action5_Rien("Rien");
         Action achatArme9 = new Action4_AcheterArme("Description achat8",arme9);
         Action sante6 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 60);
@@ -131,7 +131,7 @@ public class Labyrinthe {
         piece5.ajouterChoix(new Choix("Achat arme + Vie", achatArme10, sante7));
 
 
-        //Piece 6 - La Salle du Trône du Gardien
+        /** Piece 6 - La Salle du Trône du Gardien */
         Action achatArme11 = new Action4_AcheterArme("Description achat8",arme11);
         Action sante8 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 60);
         Action rien6 = new Action5_Rien("Rien");
@@ -143,10 +143,10 @@ public class Labyrinthe {
         piece6.ajouterChoix(new Choix("Rien",rien6));
         piece6.ajouterChoix(new Choix("Combat",combat8));
 
-        // Ajout des pièces à la liste
+        /** Ajout des pièces à la liste */
         pieces.addAll(Arrays.asList(piece1, piece2, piece3, piece4, piece5, piece6));
 
-        // Connexions entre les pièces
+        /**  Connexions entre les pièces */
         piece1.ajouterConnexion(piece2);
         piece1.ajouterConnexion(piece3);
         piece2.ajouterConnexion(piece4);
