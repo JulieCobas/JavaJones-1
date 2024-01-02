@@ -1,34 +1,26 @@
-import java.util.Random;
-
 public class Coffre {
-    private TailleCoffre taille;
-    private int pieces;
 
-    public Coffre() {
-        this.taille = genererTailleAleatoire();
-        this.pieces = PieceEnFonctionDeLaTaille(this.taille);
+    private String descriptionCoffre;
+    private int piecesGagnees;
+
+    public Coffre(String descriptionCoffre, int piecesGagnees) {
+        this.descriptionCoffre = descriptionCoffre;
+        this.piecesGagnees = piecesGagnees;
     }
 
-    private TailleCoffre genererTailleAleatoire() {
-        TailleCoffre[] tailles = TailleCoffre.values();
-        Random random = new Random();
-        return tailles[random.nextInt(tailles.length)];
+    public String getDescriptionCoffre() {
+        return descriptionCoffre;
     }
 
-    private int PieceEnFonctionDeLaTaille(TailleCoffre taille) {
-        switch (taille) {
-            case PETIT:
-                return 10; // Nombre de pièces pour un petit coffre
-            case MOYEN:
-                return 50; // Nombre de pièces pour un moyen coffre
-            case GRAND:
-                return 100; // Nombre de pièces pour un grand coffre
-            default:
-                return 0;
-        }
+    public int getPiecesGagnees() {
+        return piecesGagnees;
     }
 
-    public void ouvrirCoffre() {
-        System.out.println("Vous avez ouvert un coffre " + this.taille + " avec " + this.pieces + " pièces.");
+    public void setDescriptionCoffre(String descriptionCoffre) {
+        this.descriptionCoffre = descriptionCoffre;
+    }
+
+    public void setPiecesGagnees(int piecesGagnees) {
+        this.piecesGagnees = piecesGagnees;
     }
 }
