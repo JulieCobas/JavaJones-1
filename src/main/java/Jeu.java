@@ -20,6 +20,23 @@ public class Jeu {
 
         /** Message de confirmation du joueur */
         System.out.println("\nBienvenue dans la quête " + joueur.getNomJoueur());
-        scanner.close();
+
+        /** Choix de l'arme de début */
+        System.out.println("\n Avec quelle arme voulez-vous débuter ? Le lasso ou le Couteau a beurre ? lasso/couteau");
+        String reponseArmeDebut = "";
+        while (!reponseArmeDebut.equals("lasso") && !reponseArmeDebut.equals("couteau")) {
+            System.out.println("\nAvec quelle arme voulez-vous débuter ? Le lasso ou le couteau à beurre ? (lasso/couteau)");
+            reponseArmeDebut = scanner.nextLine().trim().toLowerCase();
+
+            if (reponseArmeDebut.equals("lasso")) {
+                joueur.setArme(Labyrinthe.arme1);
+                System.out.println("Vous avez choisi le lasso comme arme.");
+            } else if (reponseArmeDebut.equals("couteau")) {
+                joueur.setArme(Labyrinthe.arme2);
+                System.out.println("Vous avez choisi le couteau à beurre comme arme.");
+            } else {
+                System.out.println("Choix non valide, veuillez choisir entre 'lasso' et 'couteau'.");
+            }
+        }
     }
 }
