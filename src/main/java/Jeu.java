@@ -1,7 +1,11 @@
 
 import java.util.Scanner;
+
 public class Jeu {
     public static void main(String[] args) {
+
+        Labyrinthe labyrinthe = new Labyrinthe();
+
         /** Ouverture du scanner pour la saisie */
         Scanner scanner = new Scanner(System.in);
 
@@ -13,8 +17,6 @@ public class Jeu {
         /** Création du joueur */
         String nomJoueur = scanner.nextLine().trim().toLowerCase();
         Personnage joueur = new Personnage(nomJoueur);
-        joueur.getBarreDeVie();
-        joueur.getPorteMonnaie();
 
         /** Message de confirmation du joueur */
         System.out.println("\nBienvenue dans la quête " + joueur.getNomJoueur());

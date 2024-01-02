@@ -5,7 +5,7 @@ import java.util.List;
 public class Labyrinthe {
 
     /** VARIABLES D'INSTANCES */
-    private List<Piece> pieces;
+    private final List<Piece> pieces;
 
     /** CONSTRUCTEUR */
     public Labyrinthe() {
@@ -153,8 +153,13 @@ public class Labyrinthe {
         piece1.ajouterConnexion(piece2);
         piece1.ajouterConnexion(piece3);
         piece2.ajouterConnexion(piece4);
+        piece2.ajouterConnexion(piece1);
         piece3.ajouterConnexion(piece5);
+        piece3.ajouterConnexion(piece1);
+        piece4.ajouterConnexion(piece2);
         piece5.ajouterConnexion(piece6);
+        piece5.ajouterConnexion(piece1);
+        piece6.ajouterConnexion(piece5);
     }
 
     public Piece getPiece(int numeroPiece) {
