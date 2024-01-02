@@ -25,7 +25,7 @@ public class Labyrinthe {
                         "parois à la lueur de votre torche, suggérant des formes et des mouvements furtifs.",
                 1, false);
 
-        Piece piece2 = new Piece("La Chambre des ombres chuchotantes", "",2, false);
+        Piece piece2 = new Piece("La Chambre des ombres chuchotantes", "Description ombres",2, false);
         Piece piece3 = new Piece("Le Jardin des statutes", "", 3, false);
         Piece piece4 = new Piece("Le Sanctuaire oublié", "",4, false);
         Piece piece5 = new Piece("La Galerie des Illusions","" ,5, false);
@@ -224,8 +224,9 @@ public class Labyrinthe {
             // Déplacement si la destination est valide
             if (pieceDestination != null && pieceActuelle.estConnecteeAvec(pieceDestination)) {
                 joueur.setPositionActuelle(pieceDestination);
-                System.out.println("Vous êtes maintenant dans : " + pieceDestination.getNomPiece());
+                pieceDestination.getNomPiece();
                 pieceDestination.afficherDescriptionPiece();
+                pieceDestination.afficherChoixPiece();
                 break;
             } else {
                 System.out.println("Déplacement impossible dans cette direction.");
