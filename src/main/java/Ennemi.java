@@ -10,6 +10,10 @@ public class Ennemi {
         this.degats = degats;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
     public int getEnnemiVie() {
         return ennemiVie;
     }
@@ -24,5 +28,9 @@ public class Ennemi {
 
     public void setDegats(int degats) {
         this.degats = degats;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 }
