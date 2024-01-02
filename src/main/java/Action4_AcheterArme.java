@@ -1,8 +1,11 @@
 public class Action4_AcheterArme implements Action {
 
+    private String descriptionAchatArme;
     private Arme arme;
 
-    public Action4_AcheterArme(Arme arme) {
+
+    public Action4_AcheterArme(String descriptionAchatArme,Arme arme) {
+        this.descriptionAchatArme = descriptionAchatArme;
         this.arme = arme;
     }
 

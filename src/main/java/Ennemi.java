@@ -6,7 +6,7 @@ public class Ennemi {
 
     public Ennemi(String nom, int ennemiVie, int degats) {
         this.nom = nom;
-        this.ennemiVie = 100;
+        this.ennemiVie = ennemiVie;
         this.degats = degats;
     }
 

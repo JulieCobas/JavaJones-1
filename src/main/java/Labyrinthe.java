@@ -10,10 +10,10 @@ public class Labyrinthe {
     /** CONSTRUCTEUR */
     public Labyrinthe() {
         pieces = new ArrayList<>();
-        initialiserPieces();
+        initialisation();
     }
 
-    private void initialiserPieces() {
+    private void initialisation() {
         // Initialisation des pièces
         Piece piece1 = new Piece("L'Entrée maudite", 1, false);
         Piece piece2 = new Piece("La Chambre des ombres chuchotantes", 2, false);
@@ -22,42 +22,42 @@ public class Labyrinthe {
         Piece piece5 = new Piece("La Gallerie des Illusions", 5, false);
         Piece piece6 = new Piece("La Salle du Trône du Gardien", 6, true);
 
+        //Création des coffres
+        Coffre coffre1 = new Coffre("Coffre de pièces en argent", 5);
+        Coffre coffre2 = new Coffre("Coffre d'Emeraudes", 20);
+        Coffre coffre3 = new Coffre("Coffre de Saphirs", 20);
+        Coffre coffre4 = new Coffre("Coffre d'Or Pur", 40);
+        Coffre coffre5 = new Coffre("Coffre de diamants et de rubis", 100);
+
+        //Création d'ennemis
+        Ennemi ennemi1 = new Ennemi("Combats de serpents", 5, 5);
+        Ennemi ennemi2 = new Ennemi("Combat de fantômes ", 10, 10);
+        Ennemi ennemi3 = new Ennemi("Pièges au mur", 0, 20);
+        Ennemi ennemi4 = new Ennemi("Chauves-souris hurlantes", 10, 20);
+        Ennemi ennemi5 = new Ennemi("Tomber dans une cave", 0, 25);
+        Ennemi ennemi6 = new Ennemi("Combat de nains agressifs", 25, 30);
+        Ennemi ennemi7 = new Ennemi("Combat d'hommes en feu", 20, 25);
+        Ennemi ennemi8 = new Ennemi("Araignées géantes", 30, 45);
+        Ennemi boss = new Ennemi("Gardien du crâne d'or", 100, 100);
+
+        //Création des armes
+        Arme arme1 = new Arme("Lasso", 5, 0);
+        Arme arme2 = new Arme("Couteau a Beurre", 6, 0);
+        Arme arme3 = new Arme("Parapluie", 8, 3);
+        Arme arme4 = new Arme("Baguette Magique", 10, 5);
+        Arme arme5 = new Arme("Arme5", 15, 10);
+        Arme arme6 = new Arme("Arme5", 15, 10);
+        Arme arme7 = new Arme("Arme5", 15, 10);
+        Arme arme8 = new Arme("Arme5", 15, 10);
+        Arme arme9 = new Arme("Arme5", 15, 10);
+        Arme arme10 = new Arme("Arme5", 15, 10);
+        Arme arme11 = new Arme("Arme5", 15, 10);
+
         //Création des actions Santé
         Action sante1 = new Action1_AugmenterSanter("Vous avez trouver de la vie !",20);
         Action sante2 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 30);
         Action sante3 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 50);
         Action sante4 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 60);
-
-        //Création des coffres
-        Action coffre1 = new Action2_OuvrirTresor(new Coffre("Vous avez trouver un trésor", 5));
-        Action coffre2 = new Action2_OuvrirTresor(new Coffre("Vous avez trouver un trésor", 10));
-        Action coffre3 = new Action2_OuvrirTresor(new Coffre("Vous avez trouver un trésor", 20));
-        Action coffre4 = new Action2_OuvrirTresor(new Coffre("Vous avez trouver un trésor", 40));
-        Action coffre5 = new Action2_OuvrirTresor(new Coffre("Vous avez trouver un trésor", 100));
-
-        //Création des combats
-        Action combat1 = new Action3_Combattre("Combats de serpents", 5);
-        Action combat2 = new Action3_Combattre("Combat de fantômes", 10);
-        Action combat3 = new Action3_Combattre("Pièges au mur", 15);
-        Action combat4 = new Action3_Combattre("Chauves-souris", 20);
-        Action combat5 = new Action3_Combattre("Tomber dans une cave", 25);
-        Action combat6 = new Action3_Combattre("Combat de nains", 30);
-        Action combat7 = new Action3_Combattre("Combat d'hommes de feu", 35);
-        Action combat8 = new Action3_Combattre("Araignées géantes", 40);
-        Action Boss = new Action3_Combattre("Combat du Boss", 45);
-
-        //Création des armes et des achats possibles
-        Action achatArme1 = new Action4_AcheterArme(new Arme("Lasso",5,0));
-        Action achatArme2 = new Action4_AcheterArme(new Arme("Couteau a Beurre", 6, 0));
-        Action achatArme3 = new Action4_AcheterArme(new Arme("Parapluie", 8, 3));
-        Action achatArme4 = new Action4_AcheterArme(new Arme("Baguette Magique", 10, 5));
-        Action achatArme5 = new Action4_AcheterArme(new Arme("Arme5", 15, 10));
-        Action achatArme6 = new Action4_AcheterArme(new Arme("Arme6", 20, 20));
-        Action achatArme7 = new Action4_AcheterArme(new Arme("Arme7", 25, 25));
-        Action achatArme8 = new Action4_AcheterArme(new Arme("Arme8",40, 30));
-        Action achatArme9 = new Action4_AcheterArme(new Arme("Arme9", 50, 40));
-        Action achatArme10 = new Action4_AcheterArme(new Arme("Arme10", 80, 50));
-        Action achatArme11 = new Action4_AcheterArme(new Arme("Arme11", 100, 85));
 
         //Création des actions qui ne découlent sur rien
         Action rien1 = new Action5_Rien("Rien");

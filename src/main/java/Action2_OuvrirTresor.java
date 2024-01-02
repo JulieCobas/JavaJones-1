@@ -2,8 +2,10 @@
 public class Action2_OuvrirTresor implements Action {
 
     private Coffre coffre;
+    private String descriptionOuvrirTresor;
 
-    public Action2_OuvrirTresor(Coffre coffre) {
+    public Action2_OuvrirTresor(String descriptionOuvrirTresor, Coffre coffre) {
+        this.descriptionOuvrirTresor = descriptionOuvrirTresor;
         this.coffre = coffre;
     }
 

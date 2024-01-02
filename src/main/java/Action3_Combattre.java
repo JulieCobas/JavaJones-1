@@ -1,8 +1,10 @@
 public class Action3_Combattre implements Action {
 
+    private String descriptionCombat;
     private Ennemi ennemi;
 
-    public Action3_Combattre(Ennemi ennemi) {
+    public Action3_Combattre(String descriptionCombat,Ennemi ennemi) {
+        this.descriptionCombat = descriptionCombat;
         this.ennemi = ennemi;
     }
 
