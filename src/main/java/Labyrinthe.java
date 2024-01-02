@@ -166,6 +166,7 @@ public class Labyrinthe {
         piece6.ajouterConnexion(piece5); //En arrière
     }
 
+
     public Piece getPiece(int numeroPiece) {
         for (Piece piece : pieces) {
             if (piece.getNumeroPiece() == numeroPiece) {
@@ -174,6 +175,8 @@ public class Labyrinthe {
         }
         return null;
     }
+
+
     public void deplacementJoueur(Personnage joueur){
         Scanner scanner = new Scanner(System.in);
         Piece pieceActuelle = joueur.getPositionActuelle();
