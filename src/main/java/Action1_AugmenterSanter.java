@@ -19,12 +19,14 @@ public class Action1_AugmenterSanter implements Action{
 
     @Override
     public void exectuer(Personnage personnage) {
-        if (personnage.getBarreDeVie() <= 100) {
-            personnage.setBarreDeVie(personnage.getBarreDeVie() + pointsDeSante);
-            System.out.println("Votre santé a été augmenté de " + pointsDeSante);
+        int nouvelleSante = personnage.getBarreDeVie() + pointsDeSante;
+        if (nouvelleSante > 100) {
+            personnage.setBarreDeVie(Personnage.SANTE_MAXIMALE);
+            System.out.println("Votre santé est déjà au maximum !");
         }
         else {
-            personnage.setBarreDeVie(100);
+            personnage.setBarreDeVie(nouvelleSante);
+            System.out.println("Votre santé a été augmentée de " + pointsDeSante);
         }
     }
 
