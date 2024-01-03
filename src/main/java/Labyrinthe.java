@@ -17,7 +17,7 @@ public class Labyrinthe {
     private void initialisation() {
 
         /** Initialisation des pièces */
-        Piece piece1 = new Piece("L'Entrée maudite",
+        Piece piece1 = new Piece("🕯️🕯️🕯️🕯️      L'ENTREE MAUDITE      🕯️🕯️🕯️🕯️",
                 "L'air se rafraîchit soudainement alors que vous pénétrez dans L'Entrée Maudite, " +
                         "une grotte sombre et imposante. Des stalactites pendent du plafond comme d'anciens " +
                         "gardiens de pierre, et chaque goutte d'eau qui tombe résonne dans l'obscurité, " +
@@ -26,7 +26,7 @@ public class Labyrinthe {
                         "parois à la lueur de votre torche, suggérant des formes et des mouvements furtifs.",
                 1, false);
 
-        Piece piece2 = new Piece("La Chambre des ombres chuchotantes", "Description ombres",2, false);
+        Piece piece2 = new Piece("💀      LA CHAMBRE DES OMBRES CHUCHOTANTES        👻", "Description ombres",2, false);
         Piece piece3 = new Piece("Le Jardin des statutes", "", 3, false);
         Piece piece4 = new Piece("Le Sanctuaire oublié", "",4, false);
         Piece piece5 = new Piece("La Galerie des Illusions","" ,5, false);
@@ -208,6 +208,9 @@ public class Labyrinthe {
                         pieceDestination = getPiece(4);
                     } else if(pieceActuelle.getNumeroPiece() == 3) {
                         pieceDestination = getPiece(5);
+                    }
+                    else if(pieceActuelle.getNumeroPiece()== 5){
+                        pieceDestination = getPiece(6);
                     }
                     break;
                 case "arrière":

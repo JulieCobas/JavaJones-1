@@ -5,7 +5,7 @@ public class Personnage {
     private int barreDeVie;
     private Arme arme;
     private int pieces;
-    private static final int SANTE_MAXIMALE = 100;
+    public static final int SANTE_MAXIMALE = 100;
     private Piece positionActuelle;
 
     /** CONSTRUCTEUR */
@@ -55,15 +55,20 @@ public class Personnage {
     }
 
     public void afficherEtat() {
-        String barreDeVie = String.format("SANTE: %d", getBarreDeVie());
-        String infoArme = String.format("ARME: %s", getArme().getNom());
-        String degatsArme = String.format("DEGATS: %d", getArme().getDegats());
-
-        String etat = String.join(" | ", "\uD83E\uDD20", barreDeVie, infoArme, degatsArme);
-        System.out.println("\n+--------------------------------------+");
-        System.out.println("| " + etat);
-        System.out.println("+--------------------------------------+\n");
+        String barreDeVie = String.format("❤️ Santé: %d%%", getBarreDeVie());
+        String infoArme = String.format("⚔️ Arme: %s", getArme().getNom());
+        String degatsArme = String.format("💥 Dégâts: %d", getArme().getDegats());
+        String sacoche = String.format("💰 Sacoche: %d pièces", getPorteMonnaie());
+        System.out.println("                                                         ╔══════════════════════════════════════════════════════════════╗");
+        System.out.println("                                                         ║                     ~ État de l'Aventurier ~                 ║");
+        System.out.println("                                                         ╠══════════════════════════════════════════════════════════════╣");
+        System.out.printf("                                                         ║ %-60s ║\n", barreDeVie);
+        System.out.printf("                                                         ║ %-60s ║\n", infoArme);
+        System.out.printf("                                                         ║ %-60s ║\n", degatsArme);
+        System.out.printf("                                                         ║ %-60s ║\n", sacoche);
+        System.out.println("                                                         ╚══════════════════════════════════════════════════════════════╝\n");
     }
+
     public void seDeplacer(Labyrinthe labyrinthe){
         labyrinthe.deplacementJoueur(this);
     }

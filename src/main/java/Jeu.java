@@ -73,9 +73,10 @@ public class Jeu {
             pieceActuelle.afficherChoixPiece();
 
             Choix choixJoueur = pieceActuelle.demanderChoixJoueur(scanner);
-
+            joueur.afficherEtat();
             for (Action action : choixJoueur.getActions()){
                 action.exectuer(joueur);
+                joueur.afficherEtat();
                 if (joueur.getBarreDeVie() <= 0){
                     System.out.println("Vous avez perdu ! Votre aventure se termine ici...");
                     return;
@@ -86,8 +87,10 @@ public class Jeu {
                     return;
                 }
             }
+            joueur.afficherEtat();
             joueur.seDeplacer(labyrinthe);
         }
+       scanner.close();
     }
 }
 

@@ -63,9 +63,13 @@ public class Piece {
 
     public void afficherDescriptionPiece() {
         // Affiche le nom de la pièce
-        System.out.println("+--------------------------------------+");
-        System.out.println("|       " + getNomPiece() + "         |");
-        System.out.println("+--------------------------------------+\n");
+
+        String boldStart = "\033[1m";
+        String boldEnd = "\033[0m";
+
+        System.out.println("+-----------------------------------------------------------------------------------------------------------------------+");
+        System.out.printf("                                       %s%s%s                                         \n", boldStart, getNomPiece(), boldEnd);
+        System.out.println("+-----------------------------------------------------------------------------------------------------------------------+\n");
 
         // Divise la description en segments plus courts
         String[] lignesDescription = getDescription().split(", ");
