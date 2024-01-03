@@ -84,15 +84,21 @@ public class Piece {
 
     public Choix demanderChoixJoueur(Scanner scanner){
         System.out.println("Veuillez choisir une option (entrez le numéro 1/2/3/4)");
-        int choixJoueur = scanner.nextInt();
-        if (choixJoueur > 0 && choixJoueur <= choixList.size()) { // Vérifier si le choix est valide
-            return choixList.get(choixJoueur - 1); // Retourner le choix sélectionné
-        } else {
-            System.out.println("Choix invalide. Veuillez réessayer.");
-            scanner.nextLine(); // Consommer la nouvelle ligne pour éviter une boucle infinie
-            return demanderChoixJoueur(scanner); // Demander à nouveau en cas de choix invalide
+        int choixJoueur;
+        try {
+            choixJoueur = Integer.parseInt(scanner.nextLine().trim());
+            if (choixJoueur > 0 && choixJoueur <= choixList.size()) {
+                return choixList.get(choixJoueur - 1);
+            } else {
+                System.out.println("Choix invalide. Veuillez réessayer.");
+                return demanderChoixJoueur(scanner);
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Entrée invalide. Veuillez entrer un nombre.");
+            return demanderChoixJoueur(scanner);
         }
     }
+
 
 
 }

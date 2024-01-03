@@ -14,4 +14,8 @@ public class Choix {
     public String getDescription() {
         return description;
     }
+
+    public List<Action> getActions() {
+        return actions;
+    }
 }

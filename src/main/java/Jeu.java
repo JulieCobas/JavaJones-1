@@ -6,8 +6,11 @@ public class Jeu {
 
         Labyrinthe labyrinthe = new Labyrinthe();
 
+
         /** Ouverture du scanner pour la saisie */
         Scanner scanner = new Scanner(System.in);
+
+        boolean aVaincuLeBoss = false;
 
         /** Message d'introduction */
         System.out.println("\n");
@@ -36,11 +39,10 @@ public class Jeu {
             System.out.println("\nLe nom de joueur est vide ! Veuillez entrer un nom valide. ");
         }
 
-        /** Création du joueur*/
+        /** Création du joueur, position de départ, arme de départ */
         Personnage joueur = new Personnage(nomJoueur);
-
-        /** Message de confirmation du joueur */
         System.out.println("\nBienvenue dans la quête " + joueur.getNomJoueur());
+        joueur.setPositionActuelle(labyrinthe.getPiece(1));
 
         /** Choix de l'arme de début */
         String reponseArmeDebut = "";
@@ -61,16 +63,31 @@ public class Jeu {
             }
         }
 
-        /** Arrivée dans la 1ʳᵉ salle - obligatoire */
-        joueur.setPositionActuelle(labyrinthe.getPiece(1));
-        System.out.println("\n position : " + joueur.getPositionActuelle().getNomPiece());
-        joueur.afficherEtat();
-        labyrinthe.getPiece(1).afficherDescriptionPiece();
-        labyrinthe.getPiece(1).afficherChoixPiece();
+        /** Logique de jeu */
 
+        while (joueur.getBarreDeVie() > 0 ){ //Tant que la vie du joueur est supérieur à 0
+            joueur.afficherEtat();
+            Piece pieceActuelle = joueur.getPositionActuelle();
+            pieceActuelle.getNomPiece();
+            pieceActuelle.afficherDescriptionPiece();
+            pieceActuelle.afficherChoixPiece();
 
-        joueur.seDeplacer(labyrinthe);
+            Choix choixJoueur = pieceActuelle.demanderChoixJoueur(scanner);
 
+            for (Action action : choixJoueur.getActions()){
+                action.exectuer(joueur);
+                if (joueur.getBarreDeVie() <= 0){
+                    System.out.println("Vous avez perdu ! Votre aventure se termine ici...");
+                    return;
+                }
+                if (pieceActuelle.isEstPieceDuBoss()){
+                    Ennemi boss = labyrinthe.getBoss();
+                    System.out.println("Félicitations ! Vous avez vaincu le boss et réussi votre aventure !");
+                    return;
+                }
+            }
+            joueur.seDeplacer(labyrinthe);
+        }
     }
-    }
+}
 

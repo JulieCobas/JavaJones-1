@@ -6,6 +6,7 @@ public class Labyrinthe {
     private final List<Piece> pieces;
     public static Arme arme1 = new Arme("Lasso", 5, 0);
     public static Arme arme2 = new Arme("Couteau a Beurre", 6, 0);
+    private Ennemi boss;
 
     /** CONSTRUCTEUR */
     public Labyrinthe() {
@@ -49,7 +50,7 @@ public class Labyrinthe {
         Ennemi ennemi6 = new Ennemi("Combat de nains agressifs", 25, 30);
         Ennemi ennemi7 = new Ennemi("Combat d'hommes en feu", 20, 25);
         Ennemi ennemi8 = new Ennemi("Araignées géantes", 30, 45);
-        Ennemi boss = new Ennemi("Gardien du crâne d'or", 100, 100);
+        boss = new Ennemi("Gardien du crâne de Cristal", 100, 100);
 
 
         /** Création des armes */
@@ -166,6 +167,10 @@ public class Labyrinthe {
         piece6.ajouterConnexion(piece5); //En arrière
     }
 
+
+    public Ennemi getBoss(){
+        return boss;
+    }
 
     public Piece getPiece(int numeroPiece) {
         for (Piece piece : pieces) {
