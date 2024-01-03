@@ -15,21 +15,44 @@ public class Action4_AcheterArme implements Action {
     public void exectuer(Personnage personnage) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Voulez-vous acheter l'arme " + arme.getNom() + " pour " + arme.getCout() + " pièces? (oui/non)");
-        String reponse = scanner.nextLine().trim().toLowerCase();
+        // Mise en scène de l'offre d'achat
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("   ⚔️    ~ L'Échoppe Mystérieuse du Maître d'Armes ~  💰 ");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("Devant vous se tient le Maître d'Armes, une silhouette");
+        System.out.println("imposante enveloppée dans un manteau de mystères.");
+        System.out.println();
+        System.out.println("Il vous propose l'arme suivante : ");
+        System.out.println();
+        System.out.printf("    Arme : %s\n", arme.getNom());
+        System.out.printf("    Puissance de frappe : %d dégats\n", arme.getDegats());
+        System.out.printf("    Coût : %d pièces d'or\n", arme.getCout());
+        System.out.println();
+        System.out.println("Souhaitez-vous l'acheter? oui/non");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        String reponse;
 
-        if (reponse.equals("oui")) {
-            if (personnage.getPorteMonnaie() >= arme.getCout()) {
-                personnage.setPorteMonnaie(personnage.getPorteMonnaie() - arme.getCout());
-                personnage.setArme(arme);
-                System.out.println("Vous avez acheté une nouvelle arme : " + arme.getNom());
+        while (true) {
+
+            reponse = scanner.nextLine().trim().toLowerCase();
+
+            if (reponse.equals("oui")) {
+                if (personnage.getPorteMonnaie() >= arme.getCout()) {
+                    personnage.setPorteMonnaie(personnage.getPorteMonnaie() - arme.getCout());
+                    personnage.setArme(arme);
+                    System.out.println("Le Maître d'Armes hoche la tête en signe d'approbation.");
+                    System.out.println("Vous avez acquis : " + arme.getNom() + " !");
+                    break;
+                } else {
+                    System.out.println("Le Maître d'Armes soupire : « Tes pièces ne suffisent pas... Repasse me voir plus tard »");
+                    break;
+                }
+            } else if (reponse.equals("non")) {
+                System.out.println("« Un choix sage, ou peut-être prudent... » murmure le Maître d'Armes.");
+                break;
             } else {
-                System.out.println("Vous n'avez pas assez de pièces pour acheter l'arme " + arme.getNom() + ".");
+                System.out.println("Le Maître d'Armes vous regarde perplexe : « Je n'ai pas compris ta réponse... Veuillez répondre par 'oui' ou 'non'. »");
             }
-        } else if (reponse.equals("non")) {
-            System.out.println("Achat annulé.");
-        } else {
-            System.out.println("Réponse non valide, achat annulé.");
         }
 
     }

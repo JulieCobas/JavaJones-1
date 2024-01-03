@@ -22,7 +22,7 @@ public class Action1_AugmenterSanter implements Action{
         int nouvelleSante = personnage.getBarreDeVie() + pointsDeSante;
         if (nouvelleSante > 100) {
             personnage.setBarreDeVie(Personnage.SANTE_MAXIMALE);
-            System.out.println("Votre santé est déjà au maximum !");
+            System.out.println("Votre santé est déjà au maximum ! \uD83D\uDC9A");
         }
         else {
             personnage.setBarreDeVie(nouvelleSante);
