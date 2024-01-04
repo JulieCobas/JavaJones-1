@@ -54,10 +54,8 @@ public class Jeu {
             reponseArmeDebut = scanner.nextLine().trim().toLowerCase();
             if (reponseArmeDebut.equals("lasso")) {
                 joueur.setArme(Labyrinthe.arme1);
-                System.out.println("Vous avez choisi le lasso comme arme.");
             } else if (reponseArmeDebut.equals("couteau")) {
                 joueur.setArme(Labyrinthe.arme2);
-                System.out.println("Vous avez choisi le couteau à beurre comme arme de départ.");
             } else {
                 System.out.println("Choix non valide, veuillez choisir entre 'lasso' et 'couteau'.");
             }
@@ -73,7 +71,6 @@ public class Jeu {
             pieceActuelle.afficherChoixPiece();
 
             Choix choixJoueur = pieceActuelle.demanderChoixJoueur(scanner);
-            joueur.afficherEtat();
             for (Action action : choixJoueur.getActions()){
                 action.exectuer(joueur);
                 joueur.afficherEtat();
@@ -87,7 +84,6 @@ public class Jeu {
                     return;
                 }
             }
-            joueur.afficherEtat();
             joueur.seDeplacer(labyrinthe);
         }
        scanner.close();

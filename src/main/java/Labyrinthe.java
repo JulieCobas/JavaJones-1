@@ -187,7 +187,7 @@ public class Labyrinthe {
         Piece pieceActuelle = joueur.getPositionActuelle();
         Piece pieceDestination = null;
         while (true) {
-            System.out.println("Dans quelle direction voulez-vous aller ? (droite/gauche/devant/arrière)");
+            System.out.println("\nDans quelle direction voulez-vous aller ? (droite/gauche/devant/arrière)");
             String direction = scanner.nextLine().trim().toLowerCase();
             switch (direction) {
                 case "droite":
@@ -226,7 +226,7 @@ public class Labyrinthe {
                     }
                     break;
                 default:
-                    System.out.println("Direction inconnue. Veuillez réessayer.");
+                    System.out.println("\nDirection inconnue. Veuillez réessayer.");
                     continue;
             }
 
@@ -238,7 +238,7 @@ public class Labyrinthe {
                 pieceDestination.afficherChoixPiece();
                 break;
             } else {
-                System.out.println("Déplacement impossible dans cette direction.");
+                System.out.println("\nDéplacement impossible dans cette direction.");
             }
         }
     }
