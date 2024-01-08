@@ -17,7 +17,7 @@ public class Labyrinthe {
     private void initialisation() {
 
         /** Initialisation des pièces */
-        Piece piece1 = new Piece("🕯️🕯️🕯️🕯️      L'ENTREE MAUDITE      🕯️🕯️🕯️🕯️",
+        Piece piece1 = new Piece("🕯️🕯️🕯️🕯️      L'ENTRÉE MAUDITE      🕯️🕯️🕯️🕯️",
                 "L'air se rafraîchit soudainement alors que vous pénétrez dans L'Entrée Maudite, " +
                         "une grotte sombre et imposante. Des stalactites pendent du plafond comme d'anciens " +
                         "gardiens de pierre, et chaque goutte d'eau qui tombe résonne dans l'obscurité, " +
