@@ -16,7 +16,10 @@ public class Action3_Combattre implements Action {
         Scanner scanner = new Scanner(System.in); // Ouvrir le scanner
         boolean continuerCombat = true; // Variable pour continuer le combat ou arrêter
 
-        System.out.println("Combat avec " + ennemi.getNom() + "! Point de vie : " + ennemi.getEnnemiVie() + " / Dégats : " + ennemi.getDegats());
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("   💥    ~       Combat d'ennemis        ~     🗡️ ");
+        System.out.println("\nCombat avec " + ennemi.getNom() + "! Point de vie : " + ennemi.getEnnemiVie() + " / Dégats : " + ennemi.getDegats());
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         while (personnage.getBarreDeVie() > 0 && ennemi.getEnnemiVie() > 0 && continuerCombat) { // Tant que le joueur et l'ennemi ont de la vie
 
             System.out.println("Voulez-vous attaquer (a) ou fuir (f) ?");

@@ -27,10 +27,10 @@ public class Labyrinthe {
                 1, false);
 
         Piece piece2 = new Piece("💀      LA CHAMBRE DES OMBRES CHUCHOTANTES        👻", "Description ombres",2, false);
-        Piece piece3 = new Piece("Le Jardin des statutes", "", 3, false);
-        Piece piece4 = new Piece("Le Sanctuaire oublié", "",4, false);
-        Piece piece5 = new Piece("La Galerie des Illusions","" ,5, false);
-        Piece piece6 = new Piece("La Salle du Trône du Gardien","", 6, true);
+        Piece piece3 = new Piece("♟️♟️        LE JARDIN DES STATUES               ♟️♟️", "", 3, false);
+        Piece piece4 = new Piece("🌳🌳        LE SANCTUAIRE OUBLIE                🌳🌳", "",4, false);
+        Piece piece5 = new Piece("🪞🪞        LA GALERIE DES ILLUSIONS            🪞🪞","" ,5, false);
+        Piece piece6 = new Piece("👑👑        LA SALLE DU TRÔNE DU GARDIEN        👑👑","", 6, true);
 
 
         /** Création des coffres */
@@ -192,13 +192,13 @@ public class Labyrinthe {
             switch (direction) {
                 case "droite":
                     // Déplacement vers la droite
-                    if(pieceActuelle.getNumeroPiece() == 1) {
+                    if (pieceActuelle.getNumeroPiece() == 1) {
                         pieceDestination = getPiece(2);
                     }
                     break;
                 case "gauche":
                     // Déplacement vers la gauche
-                    if(pieceActuelle.getNumeroPiece() == 1) {
+                    if (pieceActuelle.getNumeroPiece() == 1) {
                         pieceDestination = getPiece(3);
                     }
                     break;

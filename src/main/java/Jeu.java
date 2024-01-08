@@ -13,15 +13,31 @@ public class Jeu {
         boolean aVaincuLeBoss = false;
 
         /** Message d'introduction */
-        System.out.println("\n");
         System.out.println("===========================================================");
         System.out.println(" Aventure de JavaJones : La Quête du Crâne de Cristal");
         System.out.println("===========================================================");
-        System.out.println("Bienvenue, aventurier intrépide, dans un monde de mystères et de périls !");
-        System.out.println("Vous incarnez JavaJones, un explorateur audacieux, déterminé à dévoiler les secrets");
-        System.out.println("du labyrinthe ancien et à récupérer le légendaire Crâne de Cristal.");
-        System.out.println("\nChaque salle du labyrinthe est un nouveau défi, avec ses ennemis à combattre,");
-        System.out.println("ses trésors à découvrir et ses mystères à résoudre.");
+        System.out.println("            ███████████████████████████\n" +
+                "           ███████▀▀▀░░░░░░░▀▀▀███████\n" +
+                "           ████▀░░░░░░░░░░░░░░░░░▀████\n" +
+                "           ███│░░░░░░░░░░░░░░░░░░░│███\n" +
+                "           ██▌│░░░░░░░░░░░░░░░░░░░│▐██\n" +
+                "           ██░└┐░░░░░░░░░░░░░░░░░┌┘░██\n" +
+                "           ██░░└┐░░░░░░░░░░░░░░░┌┘░░██\n" +
+                "           ██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██\n" +
+                "           ██▌░│██████▌░░░▐██████│░▐██\n" +
+                "           ███░│▐███▀▀░░▄░░▀▀███▌│░███\n" +
+                "           ██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██\n" +
+                "           ██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██\n" +
+                "           ████▄─┘██▌░░░░░░░▐██└─▄████\n" +
+                "           █████░░▐█─┬┬┬┬┬┬┬─█▌░░█████\n" +
+                "           ████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████\n" +
+                "           █████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████\n" +
+                "           ███████▄░░░░░░░░░░░▄███████\n" +
+                "           ██████████▄▄▄▄▄▄▄██████████\n" +
+                "           ███████████████████████████");
+        System.out.println("\nBienvenue, aventurier intrépide, dans un monde de mystères et de périls !");
+        System.out.println("\nVous incarnez JavaJones, un explorateur audacieux, déterminé à dévoiler les secrets du labyrinthe ancien et à récupérer le légendaire Crâne de Cristal.");
+        System.out.println("Chaque salle du labyrinthe est un nouveau défi, avec ses ennemis à combattre, ses trésors à découvrir et ses mystères à résoudre.");
         System.out.println("Votre courage, votre stratégie et vos choix détermineront le sort de JavaJones.");
         System.out.println("Préparez-vous pour une aventure où chaque pas peut être décisif.");
         System.out.println("\nMais avant de vous lancer dans cette quête épique...");
