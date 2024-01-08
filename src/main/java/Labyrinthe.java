@@ -233,11 +233,9 @@ public class Labyrinthe {
             // Déplacement si la destination est valide
             if (pieceDestination != null && pieceActuelle.estConnecteeAvec(pieceDestination)) {
                 joueur.setPositionActuelle(pieceDestination);
-                pieceDestination.getNomPiece();
-                pieceDestination.afficherDescriptionPiece();
-                pieceDestination.afficherChoixPiece();
                 break;
-            } else {
+            }
+            else {
                 System.out.println("\nDéplacement impossible dans cette direction.");
             }
         }

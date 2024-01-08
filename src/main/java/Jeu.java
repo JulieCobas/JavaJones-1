@@ -62,10 +62,10 @@ public class Jeu {
         }
 
         /** Logique de jeu */
-
+        Piece pieceActuelle;
         while (joueur.getBarreDeVie() > 0 ){ //Tant que la vie du joueur est supérieur à 0
             joueur.afficherEtat();
-            Piece pieceActuelle = joueur.getPositionActuelle();
+            pieceActuelle = joueur.getPositionActuelle();
             pieceActuelle.getNomPiece();
             pieceActuelle.afficherDescriptionPiece();
             pieceActuelle.afficherChoixPiece();
@@ -76,9 +76,9 @@ public class Jeu {
                 joueur.afficherEtat();
                 if (joueur.getBarreDeVie() <= 0){
                     System.out.println("Vous avez perdu ! Votre aventure se termine ici...");
-                    return;
+
                 }
-                if (pieceActuelle.isEstPieceDuBoss()){
+                else if (pieceActuelle.isEstPieceDuBoss()){
                     Ennemi boss = labyrinthe.getBoss();
                     System.out.println("Félicitations ! Vous avez vaincu le boss et réussi votre aventure !");
                     return;
