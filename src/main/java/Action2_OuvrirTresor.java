@@ -12,7 +12,7 @@ public class Action2_OuvrirTresor implements Action {
     @Override
     public void exectuer(Personnage personnage) {
         personnage.setPorteMonnaie(personnage.getPorteMonnaie()+ coffre.getPiecesGagnees());
-        System.out.println("*******************************************************************************");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("Vous avez trouvé un coffre 💰 : " + coffre.getDescriptionCoffre() + ". Il vaut " + coffre.getPiecesGagnees() + " pièces d'or.");
         System.out.println("                                                                       \n" +
                 "          |                   |                  |                     |\n" +
@@ -32,8 +32,8 @@ public class Action2_OuvrirTresor implements Action {
                 "____/______/______/______/__\"=._o--._   ;o|o;     _._;o;____/______/______/____\n" +
                 "/______/______/______/______/____\"=._o._; | ;_.--\"o.--\"_/______/______/______/_\n" +
                 "____/______/______/______/______/_____\"=.o|o_.--\"\"___/______/______/______/____\n" +
-                "/______/______/______/______/______/______/______/______/______/______/_____\n" +
-                "*******************************************************************************");
+                "/______/______/______/______/______/______/______/______/______/______/_____\n" );
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
 
     }

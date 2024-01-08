@@ -35,7 +35,7 @@ public class Jeu {
                 "           ███████▄░░░░░░░░░░░▄███████\n" +
                 "           ██████████▄▄▄▄▄▄▄██████████\n" +
                 "           ███████████████████████████");
-        System.out.println("\nBienvenue, aventurier intrépide, dans un monde de mystères et de périls !");
+        System.out.println("Bienvenue, aventurier intrépide, dans un monde de mystères et de périls !");
         System.out.println("\nVous incarnez JavaJones, un explorateur audacieux, déterminé à dévoiler les secrets du labyrinthe ancien et à récupérer le légendaire Crâne de Cristal.");
         System.out.println("Chaque salle du labyrinthe est un nouveau défi, avec ses ennemis à combattre, ses trésors à découvrir et ses mystères à résoudre.");
         System.out.println("Votre courage, votre stratégie et vos choix détermineront le sort de JavaJones.");

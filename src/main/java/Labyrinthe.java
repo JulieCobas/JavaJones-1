@@ -26,11 +26,48 @@ public class Labyrinthe {
                         "parois à la lueur de votre torche, suggérant des formes et des mouvements furtifs.",
                 1, false);
 
-        Piece piece2 = new Piece("💀      LA CHAMBRE DES OMBRES CHUCHOTANTES        👻", "Description ombres",2, false);
-        Piece piece3 = new Piece("♟️♟️        LE JARDIN DES STATUES               ♟️♟️", "", 3, false);
-        Piece piece4 = new Piece("🌳🌳        LE SANCTUAIRE OUBLIE                🌳🌳", "",4, false);
-        Piece piece5 = new Piece("🪞🪞        LA GALERIE DES ILLUSIONS            🪞🪞","" ,5, false);
-        Piece piece6 = new Piece("👑👑        LA SALLE DU TRÔNE DU GARDIEN        👑👑","", 6, true);
+        Piece piece2 = new Piece("🌳🦉♟️️       LE JARDIN DES STATUES           🌳🦉♟️",
+                "Vous arrivez dans cet espace ouvert, parsemé d'impressionnantes statues en pierre, " +
+                        "certaines érodées par le temps, d'autres étonnamment préservées. Chaque statue représente un " +
+                        "personnage ou une créature mythique, figée dans la pierre. La végétation a repris ses droits ici, " +
+                        "avec des lierres grimpants et des fleurs sauvages qui ajoutent une touche de couleur. La nuit, " +
+                        "des hiboux observent depuis les branches, et le clair de lune donne vie aux statues, créant une " +
+                        "atmosphère à la fois belle et inquiétante.",
+                3, false);
+
+        Piece piece3 = new Piece("💀💀        LA CHAMBRE DES OMBRES CHUCHOTANTES       👻👻",
+                " Vous entrez dans une chambre où les murs sont couverts de fresques anciennes, " +
+                        "dépeignant des scènes énigmatiques et des figures fantomatiques. Un murmure constant," +
+                        "presque imperceptible, imprègne l'air, comme si les ombres elles-mêmes partageaient des " +
+                        "secrets anciens. Des bougies éparses, dont la flamme vacille, projettent des ombres mouvantes " +
+                        "qui semblent chuchoter entre elles. Le sol est jonché de fragments de pierres anciennes, et " +
+                        "l'atmosphère est lourde d'un mystère palpable.",
+                2, false);
+
+        Piece piece4 = new Piece("🕸️️🪦        LE SANCTUAIRE OUBLIE               ️🪦🕸️️",
+                "Après avoir traversé le jardin, vous arrivez dans un lieu de repos éternel, avec des sarcophages de pierre alignés le long des " +
+                        "murs. Des toiles d'araignée recouvrent les recoins, et la poussière du temps rend l'air dense et " +
+                        "silencieux. Des inscriptions et des symboles mystérieux sont gravés sur les sarcophages, et au " +
+                        "centre de la pièce trône un autel orné de gemmes. Un sentiment de respect et de crainte se dégage " +
+                        "de cet endroit, comme si chaque pas perturbait un silence ancestral.",
+                4, false);
+
+        Piece piece5 = new Piece("🪞🪞        LA GALERIE DES ILLUSIONS            🪞🪞",
+                "Vous arrivez maintenant dans un couloir bordé de miroirs de toutes formes et tailles. Chaque miroir " +
+                        "reflète une image différente, certaines réalistes, d'autres complètement déformées ou fantastiques. " +
+                        "Il est difficile de distinguer ce qui est réel de ce qui est illusion, et les reflets semblent " +
+                        "parfois bouger de leur propre volonté. Des lumières douces et changeantes créent une atmosphère " +
+                        "onirique, rendant la navigation à travers cette galerie à la fois fascinante et déroutante.",
+                5, false);
+
+        Piece piece6 = new Piece("👑🧘        LA SALLE DU TRÔNE DU GARDIEN       🧘👑",
+                " Vous entrez maintenant dans la pièce la plus majestueuse du labyrinthe. Un grand trône, orné de " +
+                        "pierres précieuses, domine la salle. Des tapisseries riches et colorées décorent les murs, " +
+                        "racontant l'histoire du gardien du labyrinthe. De grandes fenêtres laissent entrer une lumière " +
+                        "naturelle, donnant à la pièce une atmosphère à la fois solennelle et accueillante. C'est ici que " +
+                        "le gardien surveille et contrôle le labyrinthe, et c'est également ici que se trouvent de nombreux " +
+                        "secrets et trésors cachés.",
+                6, true);
 
 
         /** Création des coffres */
@@ -42,14 +79,14 @@ public class Labyrinthe {
 
 
         /** Création d'ennemis */
-        Ennemi ennemi1 = new Ennemi("Combats de serpents", 5, 5);
-        Ennemi ennemi2 = new Ennemi("Combat de fantômes ", 10, 10);
+        Ennemi ennemi1 = new Ennemi("Combats de serpents 🐍", 5, 5);
+        Ennemi ennemi2 = new Ennemi("Combat de fantômes 👻", 10, 10);
         Ennemi ennemi3 = new Ennemi("Pièges au mur", 0, 20); //A MODIFIER
-        Ennemi ennemi4 = new Ennemi("Chauves-souris hurlantes", 10, 20);
+        Ennemi ennemi4 = new Ennemi("Chauves-souris hurlantes 🦇🦇", 10, 20);
         Ennemi ennemi5 = new Ennemi("Tomber dans une cave", 0, 25); // A MODIFIER
-        Ennemi ennemi6 = new Ennemi("Combat de nains agressifs", 25, 30);
-        Ennemi ennemi7 = new Ennemi("Combat d'hommes en feu", 20, 25);
-        Ennemi ennemi8 = new Ennemi("Araignées géantes", 30, 45);
+        Ennemi ennemi6 = new Ennemi("Combat de nains agressifs ", 25, 30);
+        Ennemi ennemi7 = new Ennemi("Combat d'hommes en feu 🔥", 20, 25);
+        Ennemi ennemi8 = new Ennemi("Araignées géantes 🕷️🕸️", 30, 45);
         boss = new Ennemi("Gardien du crâne de Cristal", 100, 100);
 
 
