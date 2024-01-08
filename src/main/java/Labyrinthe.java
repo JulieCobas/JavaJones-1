@@ -180,11 +180,10 @@ public class Labyrinthe {
         Action combat8 = new Action3_Combattre("Description ennemi4",ennemi8);
         Action combatBoss = new Action3_Combattre("Boss", boss);
 
-        piece6.ajouterChoix(new Choix("Achat arme",achatArme11));
-        piece6.ajouterChoix(new Choix("Vie", sante8 ));
-        piece6.ajouterChoix(new Choix("Rien",rien6));
-        piece6.ajouterChoix(new Choix("Combat",combat8));
-        piece6.ajouterChoix(new Choix("Boss", combatBoss));
+        piece6.ajouterChoix(new Choix("Achat arme + Boss",achatArme11, combatBoss));
+        piece6.ajouterChoix(new Choix("Vie + Boss", sante8, combatBoss ));
+        piece6.ajouterChoix(new Choix("Rien + Boss",rien6, combatBoss));
+        piece6.ajouterChoix(new Choix("Combat + Boss",combat8, combatBoss));
 
 
         /** Ajout des pièces à la liste */
