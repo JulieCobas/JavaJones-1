@@ -79,14 +79,14 @@ public class Labyrinthe {
 
 
         /** Création d'ennemis */
-        Ennemi ennemi1 = new Ennemi("Combats de serpents 🐍", 5, 5);
-        Ennemi ennemi2 = new Ennemi("Combat de fantômes 👻", 10, 10);
-        Ennemi ennemi3 = new Ennemi("Pièges au mur", 0, 20); //A MODIFIER
-        Ennemi ennemi4 = new Ennemi("Chauves-souris hurlantes 🦇🦇", 10, 20);
-        Ennemi ennemi5 = new Ennemi("Tomber dans une cave", 0, 25); // A MODIFIER
-        Ennemi ennemi6 = new Ennemi("Combat de nains agressifs ", 25, 30);
-        Ennemi ennemi7 = new Ennemi("Combat d'hommes en feu 🔥", 20, 25);
-        Ennemi ennemi8 = new Ennemi("Araignées géantes 🕷️🕸️", 30, 45);
+        Ennemi ennemi1 = new Ennemi("des serpents 🐍", 5, 5);
+        Ennemi ennemi2 = new Ennemi("des spectres glaciales 👻", 10, 10);
+        Ennemi ennemi3 = new Ennemi("des ", 0, 20);
+        Ennemi ennemi4 = new Ennemi("des chauves-souris hurlantes 🦇🦇", 10, 20);
+        Ennemi ennemi5 = new Ennemi("des loups-garous", 0, 25); // A MODIFIER
+        Ennemi ennemi6 = new Ennemi("des gargouilles de pierre 🗿", 25, 30);
+        Ennemi ennemi7 = new Ennemi("des hommes en feu 🔥", 20, 25);
+        Ennemi ennemi8 = new Ennemi("une araignée géante 🕷️🕸️", 30, 45);
         boss = new Ennemi("Gardien du crâne de Cristal", 100, 100);
 
 
@@ -116,7 +116,7 @@ public class Labyrinthe {
         piece1.ajouterChoix(new Choix("Combat + Achat arme", combat2, achatArme4));
         piece1.ajouterChoix(new Choix("Rien", rien1));
 
-        /** Pièce 2 - La Chambre des ombres chuchotantes */
+        /** Pièce 2 - Le Jardin des statutes */
         Action sante2 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 30);
         Action achatArme5 = new Action4_AcheterArme("Description achat5",arme5);
         Action rien2 = new Action5_Rien("Rien");
@@ -131,7 +131,7 @@ public class Labyrinthe {
         piece2.ajouterChoix(new Choix("Combat + Trésor", combat3, coffre2));
 
 
-        /** Piece 3 - Le Jardin des statutes */
+        /** Piece 3 - La Chambre des ombres chuchotantes  */
         Action sante4 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 60);
         Action coffre3 = new Action2_OuvrirTresor("Description histoire coffre", gain3);
         Action combat4 = new Action3_Combattre("Description ennemi4",ennemi4);
