@@ -87,19 +87,19 @@ public class Labyrinthe {
         Ennemi ennemi6 = new Ennemi("des plantes carnivores 🥀", 30, 30);
         Ennemi ennemi7 = new Ennemi("des hommes en feu 🔥", 35, 35);
         Ennemi ennemi8 = new Ennemi("une araignée géante 🕷️🕸️", 40, 40);
-        boss = new Ennemi("Le Gardien du crâne de Cristal 🤴", 100, 100);
+        boss = new Ennemi("Le Gardien du crâne de Cristal 🤴", 500, 100);
 
 
         /** Création des armes */
-        Arme arme3 = new Arme("Parapluie de combat","Un parapluie ordinaire en apparence, mais qui peut se transformer en bouclier ou en épée.", 8, 3);
-        Arme arme4 = new Arme("Baguette Magique", "Une simple baguette de bois qui peut lancer des sorts surprenants, comme transformer les ennemis en grenouilles.", 10, 5);
-        Arme arme5 = new Arme("Chausson de Fer","Un chausson confortable à l'extérieur, mais incroyablement solide et lourd, parfait pour balancer sur vos adversaires.", 15, 10);
-        Arme arme6 = new Arme("Gant de Cuisine","Un gant qui protège de la chaleur et confère une force surhumaine pour des claques monumentales.", 15, 10);
-        Arme arme7 = new Arme("Livre Lourd","Un gros livre, parfait pour jeter ou pour frapper avec savoir.", 15, 10);
-        Arme arme8 = new Arme("Sac à Main de Dame", "Ne sous-estimez jamais ce qui peut en sortir ou de son efficacité en toutes situations.",15, 10);
-        Arme arme9 = new Arme("Baguette de Pain Durcie","Une baguette de pain si vieille et dure qu'elle peut servir de massue.", 15, 10);
-        Arme arme10 = new Arme("Toaster Projectile","Un toaster qui lance des tranches de pain grillé à haute vitesse, idéal pour des attaques surprenantes au petit-déjeuner", 15, 10);
-        Arme arme11 = new Arme("Lance-Roquette Feux d'Artifice Express","Transformez n'importe quel problème en une étincelle colorée. Parfait pour les occassions spéciales...", 15, 10);
+        Arme arme3 = new Arme("Parapluie de combat","Un parapluie ordinaire en apparence, mais qui peut se transformer en bouclier ou en épée.", 10, 5);
+        Arme arme4 = new Arme("Baguette Magique", "Une simple baguette de bois qui peut lancer des sorts surprenants, comme transformer les ennemis en grenouilles.", 15, 10);
+        Arme arme5 = new Arme("Chausson de Fer","Un chausson confortable à l'extérieur, mais incroyablement solide et lourd, parfait pour balancer sur vos adversaires.", 20, 15);
+        Arme arme6 = new Arme("Gant de Cuisine","Un gant qui protège de la chaleur et confère une force surhumaine pour des claques monumentales.", 25, 20);
+        Arme arme7 = new Arme("Livre Lourd","Un gros livre, parfait pour jeter ou pour frapper avec savoir.", 30, 25);
+        Arme arme8 = new Arme("Sac à Main de Dame", "Ne sous-estimez jamais ce qui peut en sortir ou de son efficacité en toutes situations.",40, 30);
+        Arme arme9 = new Arme("Baguette de Pain Durcie","Une baguette de pain si vieille et dure qu'elle peut servir de massue.", 50, 50);
+        Arme arme10 = new Arme("Toaster Projectile","Un toaster qui lance des tranches de pain grillé à haute vitesse, idéal pour des attaques surprenantes au petit-déjeuner", 60, 60);
+        Arme arme11 = new Arme("Lance-Roquette Feux d'Artifice Express","Transformez n'importe quel problème en une étincelle colorée. Parfait pour les occassions spéciales...", 100, 80);
 
 
         /** Pièce 1 - L'Entrée maudite */
@@ -247,6 +247,7 @@ public class Labyrinthe {
                     // Déplacement tout droit
                     if(pieceActuelle.getNumeroPiece() == 2) {
                         pieceDestination = getPiece(4);
+                        System.out.println("\n Vous ne pouvez pas aller plus loin.");
                     }
                     if(pieceActuelle.getNumeroPiece() == 3) {
                         pieceDestination = getPiece(5);
