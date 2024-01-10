@@ -13,10 +13,10 @@ public class Jeu {
         boolean aVaincuLeBoss = false;
 
         /** Message d'introduction */
-        System.out.println("===========================================================");
+        System.out.println("\n===========================================================");
         System.out.println(" Aventure de JavaJones : La Quête du Crâne de Cristal");
         System.out.println("===========================================================");
-        System.out.println("            ███████████████████████████\n" +
+        System.out.println("           ███████████████████████████\n" +
                 "           ███████▀▀▀░░░░░░░▀▀▀███████\n" +
                 "           ████▀░░░░░░░░░░░░░░░░░▀████\n" +
                 "           ███│░░░░░░░░░░░░░░░░░░░│███\n" +
@@ -35,15 +35,16 @@ public class Jeu {
                 "           ███████▄░░░░░░░░░░░▄███████\n" +
                 "           ██████████▄▄▄▄▄▄▄██████████\n" +
                 "           ███████████████████████████");
-        System.out.println("Bienvenue, aventurier intrépide, dans un monde de mystères et de périls !");
+
+        System.out.println("\nBienvenue, aventurier intrépide, dans un monde de mystères et de périls !");
         System.out.println("\nVous incarnez JavaJones, un explorateur audacieux, déterminé à dévoiler les secrets du labyrinthe ancien et à récupérer le légendaire Crâne de Cristal.");
         System.out.println("Chaque salle du labyrinthe est un nouveau défi, avec ses ennemis à combattre, ses trésors à découvrir et ses mystères à résoudre.");
         System.out.println("Votre courage, votre stratégie et vos choix détermineront le sort de JavaJones.");
         System.out.println("Préparez-vous pour une aventure où chaque pas peut être décisif.");
         System.out.println("\nMais avant de vous lancer dans cette quête épique...");
-        System.out.println("-----------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------------------------------");
         System.out.println("Dites-nous, comment vous appelez-vous, brave aventurier :");
-        System.out.println("-----------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------------------------------");
         System.out.print("Nom d'aventurier : ");
 
         /** Demande nom du joueur */
@@ -63,9 +64,9 @@ public class Jeu {
         /** Choix de l'arme de début */
         String reponseArmeDebut = "";
         while (!reponseArmeDebut.equals("lasso") && !reponseArmeDebut.equals("couteau")) {
-            System.out.println("-----------------------------------------------------------");
+            System.out.println("------------------------------------------------------------------------------------------------");
             System.out.println("Avec quelle arme voulez-vous débuter ? Le lasso ou le couteau à beurre ? (lasso/couteau)");
-            System.out.println("-----------------------------------------------------------");
+            System.out.println("------------------------------------------------------------------------------------------------");
             System.out.print("Nom de l'arme : ");
             reponseArmeDebut = scanner.nextLine().trim().toLowerCase();
             if (reponseArmeDebut.equals("lasso")) {

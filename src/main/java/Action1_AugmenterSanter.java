@@ -1,17 +1,12 @@
 public class Action1_AugmenterSanter implements Action{
 
-    private String descriptionSante;
     private int pointsDeSante;
 
-    public Action1_AugmenterSanter(String descriptionAction,int pointsDeSante){
-        this.descriptionSante = descriptionAction;
+    public Action1_AugmenterSanter(int pointsDeSante){
         this.pointsDeSante = pointsDeSante;
     }
 
     /** GETTER */
-    public String getDescriptionAction() {
-        return descriptionSante;
-    }
 
     public int getPointsDeSante() {
         return pointsDeSante;

@@ -103,12 +103,12 @@ public class Labyrinthe {
 
 
         /** Pièce 1 - L'Entrée maudite */
-        Action coffre1 = new Action2_OuvrirTresor("Description histoire coffre", gain1);
-        Action combat1 = new Action3_Combattre("Description combat ennemi1",ennemi1);
-        Action sante1 = new Action1_AugmenterSanter("Vous avez trouver de la vie !",20);
-        Action achatArme3 = new Action4_AcheterArme("Description achatarme3",arme3);
-        Action combat2 = new Action3_Combattre("Description ennemi2",ennemi2);
-        Action achatArme4 = new Action4_AcheterArme("Description achat4",arme4);
+        Action coffre1 = new Action2_OuvrirTresor( gain1);
+        Action combat1 = new Action3_Combattre(ennemi1);
+        Action sante1 = new Action1_AugmenterSanter(20);
+        Action achatArme3 = new Action4_AcheterArme(arme3);
+        Action combat2 = new Action3_Combattre(ennemi2);
+        Action achatArme4 = new Action4_AcheterArme(arme4);
         Action rien1 = new Action5_Rien("Rien");
 
         piece1.ajouterChoix(new Choix("Gagner un trésor et combat", coffre1, combat1));
@@ -117,13 +117,13 @@ public class Labyrinthe {
         piece1.ajouterChoix(new Choix("Rien", rien1));
 
         /** Pièce 2 - Le Jardin des statutes */
-        Action sante2 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 30);
-        Action achatArme5 = new Action4_AcheterArme("Description achat5",arme5);
+        Action sante2 = new Action1_AugmenterSanter( 30);
+        Action achatArme5 = new Action4_AcheterArme(arme5);
         Action rien2 = new Action5_Rien("Rien");
-        Action sante3 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 50);
-        Action achatArme6 = new Action4_AcheterArme("Description achat5",arme6);
-        Action combat3 = new Action3_Combattre("Description ennemi3",ennemi3);
-        Action coffre2 = new Action2_OuvrirTresor("Description histoire coffre", gain2);
+        Action sante3 = new Action1_AugmenterSanter( 50);
+        Action achatArme6 = new Action4_AcheterArme(arme6);
+        Action combat3 = new Action3_Combattre(ennemi3);
+        Action coffre2 = new Action2_OuvrirTresor( gain2);
 
         piece2.ajouterChoix(new Choix("Vie + Achat armes", sante2, achatArme5));
         piece2.ajouterChoix(new Choix("Rien", rien2));
@@ -132,11 +132,11 @@ public class Labyrinthe {
 
 
         /** Piece 3 - La Chambre des ombres chuchotantes  */
-        Action sante4 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 60);
-        Action coffre3 = new Action2_OuvrirTresor("Description histoire coffre", gain3);
-        Action combat4 = new Action3_Combattre("Description ennemi4",ennemi4);
+        Action sante4 = new Action1_AugmenterSanter( 60);
+        Action coffre3 = new Action2_OuvrirTresor( gain3);
+        Action combat4 = new Action3_Combattre(ennemi4);
         Action rien3 = new Action5_Rien("Rien");
-        Action achatArme7 = new Action4_AcheterArme("Description achat7",arme7);
+        Action achatArme7 = new Action4_AcheterArme(arme7);
 
         piece3.ajouterChoix(new Choix("Vie + Trésor", sante4,coffre3));
         piece3.ajouterChoix(new Choix("Combat", combat4));
@@ -145,11 +145,11 @@ public class Labyrinthe {
 
 
         /** Piece 4 - Le Sanctuaire oublié */
-        Action achatArme8 = new Action4_AcheterArme("Description achat8",arme8);
-        Action coffre4 = new Action2_OuvrirTresor("Description histoire coffre", gain4);
-        Action combat5 = new Action3_Combattre("Description ennemi4",ennemi5);
-        Action combat6 = new Action3_Combattre("Description ennemi4",ennemi6);
-        Action sante5 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 60);
+        Action achatArme8 = new Action4_AcheterArme(arme8);
+        Action coffre4 = new Action2_OuvrirTresor( gain4);
+        Action combat5 = new Action3_Combattre(ennemi5);
+        Action combat6 = new Action3_Combattre(ennemi6);
+        Action sante5 = new Action1_AugmenterSanter( 60);
         Action rien4 = new Action5_Rien("Rien");
 
         piece4.ajouterChoix(new Choix("Achat arme + coffre", achatArme8, coffre4));
@@ -160,12 +160,12 @@ public class Labyrinthe {
 
         /**  Piece 5 - La Gallerie des Illusions */
         Action rien5 = new Action5_Rien("Rien");
-        Action achatArme9 = new Action4_AcheterArme("Description achat8",arme9);
-        Action sante6 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 60);
-        Action combat7 = new Action3_Combattre("Description ennemi4",ennemi7);
-        Action coffre5 = new Action2_OuvrirTresor("Description histoire coffre", gain5);
-        Action achatArme10 = new Action4_AcheterArme("Description achat8",arme10);
-        Action sante7 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 60);
+        Action achatArme9 = new Action4_AcheterArme(arme9);
+        Action sante6 = new Action1_AugmenterSanter( 60);
+        Action combat7 = new Action3_Combattre(ennemi7);
+        Action coffre5 = new Action2_OuvrirTresor(gain5);
+        Action achatArme10 = new Action4_AcheterArme(arme10);
+        Action sante7 = new Action1_AugmenterSanter( 60);
 
         piece5.ajouterChoix(new Choix("Rien", rien5));
         piece5.ajouterChoix(new Choix("Achat arme + Vie",achatArme9, sante6));
@@ -174,11 +174,11 @@ public class Labyrinthe {
 
 
         /** Piece 6 - La Salle du Trône du Gardien */
-        Action achatArme11 = new Action4_AcheterArme("Description achat8",arme11);
-        Action sante8 = new Action1_AugmenterSanter("Vous avez trouver de la vie !", 60);
+        Action achatArme11 = new Action4_AcheterArme(arme11);
+        Action sante8 = new Action1_AugmenterSanter( 60);
         Action rien6 = new Action5_Rien("Rien");
-        Action combat8 = new Action3_Combattre("Description ennemi4",ennemi8);
-        Action combatBoss = new Action3_Combattre("Boss", boss);
+        Action combat8 = new Action3_Combattre(ennemi8);
+        Action combatBoss = new Action3_Combattre(boss);
 
         piece6.ajouterChoix(new Choix("Achat arme + Boss",achatArme11, combatBoss));
         piece6.ajouterChoix(new Choix("Vie + Boss", sante8, combatBoss ));
@@ -217,13 +217,14 @@ public class Labyrinthe {
         return null;
     }
 
-
     public void deplacementJoueur(Personnage joueur){
         Scanner scanner = new Scanner(System.in);
         Piece pieceActuelle = joueur.getPositionActuelle();
         Piece pieceDestination = null;
         while (true) {
-            System.out.println("\nDans quelle direction voulez-vous aller ? (droite/gauche/devant/arrière)");
+            System.out.println("------------------------------------------------------------------------------------------------");
+            System.out.println(" \uD83D\uDEAA \uD83C\uDFC3 Dans quelle direction voulez-vous aller ? (droite/gauche/devant/arrière)");
+            System.out.println("------------------------------------------------------------------------------------------------");
             String direction = scanner.nextLine().trim().toLowerCase();
             switch (direction) {
                 case "droite":
@@ -272,7 +273,7 @@ public class Labyrinthe {
                 break;
             }
             else {
-                System.out.println("\nDéplacement impossible dans cette direction.");
+                System.out.println("\nDéplacement impossible dans cette direction. ❌ ");
             }
         }
     }

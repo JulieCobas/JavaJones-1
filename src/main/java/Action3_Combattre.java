@@ -3,11 +3,9 @@ import java.util.Scanner;
 
 public class Action3_Combattre implements Action {
 
-    private String descriptionCombat;
     private Ennemi ennemi;
 
-    public Action3_Combattre(String descriptionCombat,Ennemi ennemi) {
-        this.descriptionCombat = descriptionCombat;
+    public Action3_Combattre(Ennemi ennemi) {
         this.ennemi = ennemi;
     }
 
@@ -18,7 +16,7 @@ public class Action3_Combattre implements Action {
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("   💥    ~       Combat d'ennemis        ~     🗡️ ");
-        System.out.println("\nCombat avec " + ennemi.getNom() + "! Point de vie : " + ennemi.getEnnemiVie() + " / Dégats : " + ennemi.getDegats());
+        System.out.println("Combat avec " + ennemi.getNom() + " || Point de vie : " + ennemi.getEnnemiVie() + " / Dégats : " + ennemi.getDegats());
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         while (personnage.getBarreDeVie() > 0 && ennemi.getEnnemiVie() > 0 && continuerCombat) { // Tant que le joueur et l'ennemi ont de la vie
 

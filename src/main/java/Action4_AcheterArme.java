@@ -2,12 +2,10 @@ import java.util.Scanner;
 
 public class Action4_AcheterArme implements Action {
 
-    private String descriptionAchatArme;
     private Arme arme;
 
 
-    public Action4_AcheterArme(String descriptionAchatArme,Arme arme) {
-        this.descriptionAchatArme = descriptionAchatArme;
+    public Action4_AcheterArme(Arme arme) {
         this.arme = arme;
     }
 
@@ -44,14 +42,14 @@ public class Action4_AcheterArme implements Action {
                     System.out.println("Vous avez acquis : " + arme.getNom() + " !");
                     break;
                 } else {
-                    System.out.println("Le Maître d'Armes soupire : « Tes pièces ne suffisent pas... Repasse me voir plus tard »");
+                    System.out.println("Le Maître d'Armes soupire : « Tes pièces ne suffisent pas... Repasse me voir plus tard \n»");
                     break;
                 }
             } else if (reponse.equals("non")) {
                 System.out.println("« Un choix sage, ou peut-être prudent... » murmure le Maître d'Armes.");
                 break;
             } else {
-                System.out.println("Le Maître d'Armes vous regarde perplexe : « Je n'ai pas compris ta réponse... Veuillez répondre par 'oui' ou 'non'. »");
+                System.out.println("Le Maître d'Armes vous regarde perplexe : « Je n'ai pas compris ta réponse... Veuillez répondre par 'oui' ou 'non'.\n »");
             }
         }
 
