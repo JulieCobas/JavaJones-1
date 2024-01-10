@@ -26,7 +26,4 @@ public class Ennemi {
         this.ennemiVie = ennemiVie;
     }
 
-    public boolean estVaincu(){
-        return ennemiVie <= 0;
-    }
 }
