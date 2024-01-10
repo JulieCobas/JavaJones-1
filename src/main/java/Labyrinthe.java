@@ -141,7 +141,7 @@ public class Labyrinthe {
         piece3.ajouterChoix(new Choix("Vie + Trésor", sante4,coffre3));
         piece3.ajouterChoix(new Choix("Combat", combat4));
         piece3.ajouterChoix(new Choix("Rien", rien3));
-        piece3.ajouterChoix(new Choix("Achat arme" + achatArme7));
+        piece3.ajouterChoix(new Choix("Achat arme", achatArme7));
 
 
         /** Piece 4 - Le Sanctuaire oublié */
