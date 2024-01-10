@@ -8,10 +8,6 @@ public class Action1_AugmenterSanter implements Action{
 
     /** GETTER */
 
-    public int getPointsDeSante() {
-        return pointsDeSante;
-    }
-
     @Override
     public void exectuer(Personnage personnage) {
         int nouvelleSante = personnage.getBarreDeVie() + pointsDeSante;
