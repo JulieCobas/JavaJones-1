@@ -27,33 +27,33 @@ public class Action3_Combattre implements Action {
                 ennemi.setEnnemiVie(ennemi.getEnnemiVie() - personnage.getArme().getDegats()); // Réduire la vie de l'ennemi
 
                 if (ennemi.getEnnemiVie() <= 0) { // Si l'ennemi est vaincu
-                    System.out.println("Vous avez vaincu " + ennemi.getNom() + " !");
+                    System.out.println("\nVous avez vaincu " + ennemi.getNom() + " !");
                     break;
                 }
 
                 else {
-                    System.out.println("" + ennemi.getNom() + " est toujours vivant. Dégâts restants : " + ennemi.getEnnemiVie());
+                    System.out.println("\nL'ennemi est toujours vivant. Dégâts restants : " + ennemi.getEnnemiVie() + " ❗");
                 }
 
                 // Appliquer les dégâts de l'ennemi au joueur
                 personnage.setBarreDeVie(personnage.getBarreDeVie() - ennemi.getDegats());
-                System.out.println("Vous avez subi " + ennemi.getDegats() + " points de dégats.");
+                System.out.println("\nVous avez subi " + ennemi.getDegats() + " points de dégats. 🔻🧡");
                 personnage.afficherEtat();
 
                 if (personnage.getBarreDeVie() <= 0) { // Si le joueur est vaincu
-                    System.out.println("Vous avez été vaincu par " + ennemi.getNom() + "!");
+                    System.out.println("\nVous avez été vaincu par " + ennemi.getNom() + "!");
                     break;
                 }
             }
 
             else if (choix.equals("f")) { // Fuir
-                System.out.println("Vous avez fui le combat");
+                System.out.println("\nVous avez fui le combat");
                 continuerCombat = false; // Arrêter le combat
 
             }
 
             else { // Choix non valide
-                System.out.println("Choix non valide, veuillez choisir entre attaquer (a) ou fuir (f)");
+                System.out.println("\nChoix non valide, veuillez choisir entre attaquer (a) ou fuir (f)");
             }
         }
     }

@@ -72,21 +72,21 @@ public class Labyrinthe {
 
         /** Création des coffres */
         Coffre gain1 = new Coffre("Coffre de pièces en argent", 5);
-        Coffre gain2 = new Coffre("Coffre d'Emeraudes", 20);
-        Coffre gain3 = new Coffre("Coffre de Saphirs", 20);
-        Coffre gain4 = new Coffre("Coffre d'Or Pur", 40);
+        Coffre gain2 = new Coffre("Coffre d'Emeraudes", 15);
+        Coffre gain3 = new Coffre("Coffre de Saphirs", 40);
+        Coffre gain4 = new Coffre("Coffre d'Or Pur", 60);
         Coffre gain5 = new Coffre("Coffre de diamants et de rubis", 100);
 
 
-        /** Création d'ennemis */ //A refaire
+        /** Création d'ennemis */
         Ennemi ennemi1 = new Ennemi("des serpents 🐍", 5, 5);
         Ennemi ennemi2 = new Ennemi("des chauves-souris hurlantes 🦇🦇", 10, 10);
-        Ennemi ennemi3 = new Ennemi("des gargouilles de pierre 🗿 ", 0, 20);
-        Ennemi ennemi4 = new Ennemi("des spectres glaciales 👻", 10, 20);
-        Ennemi ennemi5 = new Ennemi("des morts vivants 💀💀", 0, 25); // A MODIFIER
-        Ennemi ennemi6 = new Ennemi("des plantes carnivores 🥀", 25, 30);
-        Ennemi ennemi7 = new Ennemi("des hommes en feu 🔥", 20, 25);
-        Ennemi ennemi8 = new Ennemi("une araignée géante 🕷️🕸️", 30, 45);
+        Ennemi ennemi3 = new Ennemi("des gargouilles de pierre 🗿 ", 15, 15);
+        Ennemi ennemi4 = new Ennemi("des spectres glaciales 👻",20, 20);
+        Ennemi ennemi5 = new Ennemi("des morts vivants 💀💀", 25, 25); // A MODIFIER
+        Ennemi ennemi6 = new Ennemi("des plantes carnivores 🥀", 30, 30);
+        Ennemi ennemi7 = new Ennemi("des hommes en feu 🔥", 35, 35);
+        Ennemi ennemi8 = new Ennemi("une araignée géante 🕷️🕸️", 40, 40);
         boss = new Ennemi("Le Gardien du crâne de Cristal 🤴", 100, 100);
 
 
@@ -96,7 +96,7 @@ public class Labyrinthe {
         Arme arme5 = new Arme("Chausson de Fer","Un chausson confortable à l'extérieur, mais incroyablement solide et lourd, parfait pour balancer sur vos adversaires.", 15, 10);
         Arme arme6 = new Arme("Gant de Cuisine","Un gant qui protège de la chaleur et confère une force surhumaine pour des claques monumentales.", 15, 10);
         Arme arme7 = new Arme("Livre Lourd","Un gros livre, parfait pour jeter ou pour frapper avec savoir.", 15, 10);
-        Arme arme8 = new Arme("Sac à Main de Dame", "Ne sous-estimez jamais ce qui peut en sortir ou son efficacité en toutes situations.",15, 10);
+        Arme arme8 = new Arme("Sac à Main de Dame", "Ne sous-estimez jamais ce qui peut en sortir ou de son efficacité en toutes situations.",15, 10);
         Arme arme9 = new Arme("Baguette de Pain Durcie","Une baguette de pain si vieille et dure qu'elle peut servir de massue.", 15, 10);
         Arme arme10 = new Arme("Toaster Projectile","Un toaster qui lance des tranches de pain grillé à haute vitesse, idéal pour des attaques surprenantes au petit-déjeuner", 15, 10);
         Arme arme11 = new Arme("Lance-Roquette Feux d'Artifice Express","Transformez n'importe quel problème en une étincelle colorée. Parfait pour les occassions spéciales...", 15, 10);
@@ -111,7 +111,7 @@ public class Labyrinthe {
         Action achatArme4 = new Action4_AcheterArme(arme4);
         Action rien1 = new Action5_Rien("Rien");
 
-        piece1.ajouterChoix(new Choix("Gagner un trésor et combat", coffre1, combat1));
+        piece1.ajouterChoix(new Choix("Gagner un trésor et combat", combat1, coffre1));
         piece1.ajouterChoix(new Choix("Vie + achat arme", sante1, achatArme3));
         piece1.ajouterChoix(new Choix("Combat + Achat arme", combat2, achatArme4));
         piece1.ajouterChoix(new Choix("Rien", rien1));
@@ -152,7 +152,7 @@ public class Labyrinthe {
         Action sante5 = new Action1_AugmenterSanter( 60);
         Action rien4 = new Action5_Rien("Rien");
 
-        piece4.ajouterChoix(new Choix("Achat arme + coffre", achatArme8, coffre4));
+        piece4.ajouterChoix(new Choix("Achat arme + coffre", coffre4, achatArme8));
         piece4.ajouterChoix(new Choix("Combat + Combat", combat5, combat6));
         piece4.ajouterChoix(new Choix("Vie",sante5));
         piece4.ajouterChoix(new Choix("Rien", rien4));

@@ -43,14 +43,14 @@ public class Action4_AcheterArme implements Action {
                     System.out.println("Vous avez acquis : " + arme.getNom() + " !");
                     break;
                 } else {
-                    System.out.println("Le Maître d'Armes soupire : « Tes pièces ne suffisent pas... Repasse me voir plus tard \n»");
+                    System.out.println("\nLe Maître d'Armes soupire : « Tes pièces ne suffisent pas... Repasse me voir plus tard »\n");
                     break;
                 }
             } else if (reponse.equals("non")) {
-                System.out.println("« Un choix sage, ou peut-être prudent... » murmure le Maître d'Armes.");
+                System.out.println("«\nUn choix sage, ou peut-être prudent... » murmure le Maître d'Armes.");
                 break;
             } else {
-                System.out.println("Le Maître d'Armes vous regarde perplexe : « Je n'ai pas compris ta réponse... Veuillez répondre par 'oui' ou 'non'.\n »");
+                System.out.println("\nLe Maître d'Armes vous regarde perplexe : « Je n'ai pas compris votre réponse... Veuillez répondre par 'oui' ou 'non'.»\n");
             }
         }
 
