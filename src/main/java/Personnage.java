@@ -1,6 +1,6 @@
 public class Personnage {
 
-    /** Variables d'instance */
+    /** Variables d'instances */
     private String nom;
     private int barreDeVie;
     private Arme arme;
@@ -54,6 +54,8 @@ public class Personnage {
         this.positionActuelle = positionActuelle;
     }
 
+
+    /** Afficher le profil du joueur*/
     public void afficherEtat() {
         String barreDeVie = String.format("❤️ Santé: %d%%", getBarreDeVie());
         String infoArme = String.format("⚔️ Arme: %s", getArme().getNom());
@@ -69,6 +71,7 @@ public class Personnage {
         System.out.println("                                                         ╚══════════════════════════════════════════════════════════════╝\n");
     }
 
+    /** Déplacement du joueur dans le labyrinthe */
     public void seDeplacer(Labyrinthe labyrinthe){
         labyrinthe.deplacementJoueur(this);
     }

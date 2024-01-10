@@ -146,7 +146,7 @@ public class Labyrinthe {
 
         /** Piece 4 - Le Sanctuaire oublié */
         Action achatArme8 = new Action4_AcheterArme(arme8);
-        Action coffre4 = new Action2_OuvrirTresor( gain4);
+        Action coffre4 = new Action2_OuvrirTresor(gain4);
         Action combat5 = new Action3_Combattre(ennemi5);
         Action combat6 = new Action3_Combattre(ennemi6);
         Action sante5 = new Action1_AugmenterSanter( 60);
