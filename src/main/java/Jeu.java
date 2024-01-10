@@ -95,9 +95,8 @@ public class Jeu {
                     System.out.println("Vous avez perdu ! Votre aventure se termine ici...");
 
                 }
-                else if (pieceActuelle.isEstPieceDuBoss()){
-                    Ennemi boss = labyrinthe.getBoss();
-                    System.out.println("Félicitations ! Vous avez vaincu le boss et réussi votre aventure !");
+                else if (pieceActuelle.isEstPieceDuBoss() && labyrinthe.getBoss().getEnnemiVie() < 0){
+                    System.out.println("Félicitations ! Vous avez vaincu le " + labyrinthe.getBoss().getNom() +" et réussi votre aventure !");
                     return;
                 }
             }
