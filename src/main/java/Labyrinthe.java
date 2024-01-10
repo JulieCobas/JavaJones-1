@@ -225,9 +225,9 @@ public class Labyrinthe {
         Piece pieceActuelle = joueur.getPositionActuelle();
         Piece pieceDestination = null;
         while (true) {
-            System.out.println("------------------------------------------------------------------------------------------------");
+            System.out.println(">------------------------------------------------------------------------------------------------>");
             System.out.println(" \uD83D\uDEAA \uD83C\uDFC3 Dans quelle direction voulez-vous aller ? (droite/gauche/devant/arrière)");
-            System.out.println("------------------------------------------------------------------------------------------------");
+            System.out.println(">------------------------------------------------------------------------------------------------>");
 
             String direction = scanner.nextLine().trim().toLowerCase();
             switch (direction) {
@@ -247,7 +247,6 @@ public class Labyrinthe {
                     // Déplacement tout droit
                     if(pieceActuelle.getNumeroPiece() == 2) {
                         pieceDestination = getPiece(4);
-                        System.out.println("\n Vous ne pouvez pas aller plus loin.");
                     }
                     if(pieceActuelle.getNumeroPiece() == 3) {
                         pieceDestination = getPiece(5);
