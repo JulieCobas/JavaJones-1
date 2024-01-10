@@ -4,8 +4,8 @@ public class Labyrinthe {
 
     /** VARIABLES D'INSTANCES */
     private final List<Piece> pieces;
-    public static Arme arme1 = new Arme("Lasso", 5, 0);
-    public static Arme arme2 = new Arme("Couteau a Beurre", 6, 0);
+    public static Arme arme1 = new Arme("Lasso", "",5, 0);
+    public static Arme arme2 = new Arme("Couteau a Beurre", "",6, 0);
     private Ennemi boss;
 
     /** CONSTRUCTEUR */
