@@ -277,8 +277,12 @@ public class Labyrinthe {
                 joueur.setPositionActuelle(pieceDestination);
                 break;
             }
-            else {
-                System.out.println("\nDéplacement impossible dans cette direction. ❌ ");
+            //Cul de sac de la pièce 4
+            else if (pieceActuelle.getNumeroPiece() == 4){
+                System.out.println("\nVous êtes bloquée. On ne peut pas aller plus loin. Retourner en arrière...");
+                }
+            //Si la direction est impossible
+            else {System.out.println("\nDéplacement impossible dans cette direction. ❌ ");
             }
         }
     }
