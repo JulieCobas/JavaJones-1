@@ -33,7 +33,7 @@ public class Labyrinthe {
                         "avec des lierres grimpants et des fleurs sauvages qui ajoutent une touche de couleur. La nuit, " +
                         "des hiboux observent depuis les branches, et le clair de lune donne vie aux statues, créant une " +
                         "atmosphère à la fois belle et inquiétante.",
-                3, false);
+                2, false);
 
         Piece piece3 = new Piece("💀💀        LA CHAMBRE DES OMBRES CHUCHOTANTES       👻👻",
                 " Vous entrez dans une chambre où les murs sont couverts de fresques anciennes, " +
@@ -42,7 +42,7 @@ public class Labyrinthe {
                         "secrets anciens. Des bougies éparses, dont la flamme vacille, projettent des ombres mouvantes " +
                         "qui semblent chuchoter entre elles. Le sol est jonché de fragments de pierres anciennes, et " +
                         "l'atmosphère est lourde d'un mystère palpable.",
-                2, false);
+                3, false);
 
         Piece piece4 = new Piece("🕸️️🪦        LE SANCTUAIRE OUBLIE               ️🪦🕸️️",
                 "Après avoir traversé le jardin, vous arrivez dans un lieu de repos éternel, avec des sarcophages de pierre alignés le long des " +
@@ -185,22 +185,25 @@ public class Labyrinthe {
         piece6.ajouterChoix(new Choix("Rien + Boss",rien6, combatBoss));
         piece6.ajouterChoix(new Choix("Combat + Boss",combat8, combatBoss));
 
-
-        /** Ajout des pièces à la liste */
-        pieces.addAll(Arrays.asList(piece1, piece2, piece3, piece4, piece5, piece6));
-
-
         /**  Connexions entre les pièces */
         piece1.ajouterConnexion(piece2);// Droite
         piece1.ajouterConnexion(piece3); //Gauche
+
         piece2.ajouterConnexion(piece4);//Tout droit
         piece2.ajouterConnexion(piece1);//En arrière
+
         piece3.ajouterConnexion(piece5);//Tout droit
         piece3.ajouterConnexion(piece1);//En arrière
+
         piece4.ajouterConnexion(piece2); //En arrière
+
         piece5.ajouterConnexion(piece6); //Tout droit
         piece5.ajouterConnexion(piece1); //En arrière
+
         piece6.ajouterConnexion(piece5); //En arrière
+
+        /** Ajout des pièces à la liste */
+        pieces.addAll(Arrays.asList(piece1, piece2, piece3, piece4, piece5, piece6));
     }
 
 
@@ -225,11 +228,13 @@ public class Labyrinthe {
             System.out.println("------------------------------------------------------------------------------------------------");
             System.out.println(" \uD83D\uDEAA \uD83C\uDFC3 Dans quelle direction voulez-vous aller ? (droite/gauche/devant/arrière)");
             System.out.println("------------------------------------------------------------------------------------------------");
+            System.out.println("Pièce : " + joueur.getPositionActuelle().getNomPiece());
+
             String direction = scanner.nextLine().trim().toLowerCase();
             switch (direction) {
                 case "droite":
                     // Déplacement vers la droite
-                    if (pieceActuelle.getNumeroPiece() == 1) {
+                    if( pieceActuelle.getNumeroPiece() == 1) {
                         pieceDestination = getPiece(2);
                     }
                     break;
@@ -243,10 +248,11 @@ public class Labyrinthe {
                     // Déplacement tout droit
                     if(pieceActuelle.getNumeroPiece() == 2) {
                         pieceDestination = getPiece(4);
-                    } else if(pieceActuelle.getNumeroPiece() == 3) {
+                    }
+                    if(pieceActuelle.getNumeroPiece() == 3) {
                         pieceDestination = getPiece(5);
                     }
-                    else if(pieceActuelle.getNumeroPiece()== 5){
+                    if(pieceActuelle.getNumeroPiece()== 5){
                         pieceDestination = getPiece(6);
                     }
                     break;
@@ -270,6 +276,7 @@ public class Labyrinthe {
             // Déplacement si la destination est valide
             if (pieceDestination != null && pieceActuelle.estConnecteeAvec(pieceDestination)) {
                 joueur.setPositionActuelle(pieceDestination);
+                System.out.println("Pièce : " + joueur.getPositionActuelle().getNomPiece());
                 break;
             }
             else {
