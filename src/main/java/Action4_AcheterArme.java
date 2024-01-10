@@ -23,6 +23,7 @@ public class Action4_AcheterArme implements Action {
         System.out.println("Il vous propose l'arme suivante : ");
         System.out.println();
         System.out.printf("    Arme : %s\n", arme.getNom());
+        System.out.printf("    Description : %s\n", arme.getDescription());
         System.out.printf("    Puissance de frappe : %d dégats\n", arme.getDegats());
         System.out.printf("    Coût : %d pièces d'or\n", arme.getCout());
         System.out.println();

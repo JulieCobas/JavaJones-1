@@ -78,7 +78,7 @@ public class Labyrinthe {
         Coffre gain5 = new Coffre("Coffre de diamants et de rubis", 100);
 
 
-        /** Création d'ennemis */
+        /** Création d'ennemis */ //A refaire
         Ennemi ennemi1 = new Ennemi("des serpents 🐍", 5, 5);
         Ennemi ennemi2 = new Ennemi("des spectres glaciales 👻", 10, 10);
         Ennemi ennemi3 = new Ennemi("des ", 0, 20);
@@ -90,20 +90,20 @@ public class Labyrinthe {
         boss = new Ennemi("Gardien du crâne de Cristal", 100, 100);
 
 
-        /** Création des armes */
-        Arme arme3 = new Arme("Parapluie", 8, 3);
-        Arme arme4 = new Arme("Baguette Magique", 10, 5);
-        Arme arme5 = new Arme("Arme5", 15, 10);
-        Arme arme6 = new Arme("Arme5", 15, 10);
-        Arme arme7 = new Arme("Arme5", 15, 10);
-        Arme arme8 = new Arme("Arme5", 15, 10);
-        Arme arme9 = new Arme("Arme5", 15, 10);
-        Arme arme10 = new Arme("Arme5", 15, 10);
-        Arme arme11 = new Arme("Arme5", 15, 10);
+        /** Création des armes */ //A refaire
+        Arme arme3 = new Arme("Parapluie de combat","Un parapluie ordinaire en apparence, mais qui peut se transformer en bouclier ou en épée.", 8, 3);
+        Arme arme4 = new Arme("Baguette Magique", "Une simple baguette de bois qui peut lancer des sorts surprenants, comme transformer les ennemis en grenouilles.", 10, 5);
+        Arme arme5 = new Arme("Chausson de Fer","Un chausson confortable à l'extérieur, mais incroyablement solide et lourd, parfait pour balancer sur vos adversaires.", 15, 10);
+        Arme arme6 = new Arme("Gant de Cuisine","Un gant qui protège de la chaleur et confère une force surhumaine pour des claques monumentales.", 15, 10);
+        Arme arme7 = new Arme("Livre Lourd","Un gros livre, parfait pour jeter ou pour frapper avec savoir.", 15, 10);
+        Arme arme8 = new Arme("Sac à Main de Dame", "Ne sous-estimez jamais ce qui peut en sortir ou son efficacité en toutes situations.",15, 10);
+        Arme arme9 = new Arme("Baguette de Pain Durcie","Une baguette de pain si vieille et dure qu'elle peut servir de massue.", 15, 10);
+        Arme arme10 = new Arme("Toaster Projectile","Un toaster qui lance des tranches de pain grillé à haute vitesse, idéal pour des attaques surprenantes au petit-déjeuner", 15, 10);
+        Arme arme11 = new Arme("Lance-Roquette Feux d'Artifice Express","Transformez n'importe quel problème en une étincelle colorée. Parfait pour les occassions spéciales...", 15, 10);
 
 
         /** Pièce 1 - L'Entrée maudite */
-        Action coffre1 = new Action2_OuvrirTresor( gain1);
+        Action coffre1 = new Action2_OuvrirTresor(gain1);
         Action combat1 = new Action3_Combattre(ennemi1);
         Action sante1 = new Action1_AugmenterSanter(20);
         Action achatArme3 = new Action4_AcheterArme(arme3);
@@ -228,7 +228,6 @@ public class Labyrinthe {
             System.out.println("------------------------------------------------------------------------------------------------");
             System.out.println(" \uD83D\uDEAA \uD83C\uDFC3 Dans quelle direction voulez-vous aller ? (droite/gauche/devant/arrière)");
             System.out.println("------------------------------------------------------------------------------------------------");
-            System.out.println("Pièce : " + joueur.getPositionActuelle().getNomPiece());
 
             String direction = scanner.nextLine().trim().toLowerCase();
             switch (direction) {
@@ -276,7 +275,6 @@ public class Labyrinthe {
             // Déplacement si la destination est valide
             if (pieceDestination != null && pieceActuelle.estConnecteeAvec(pieceDestination)) {
                 joueur.setPositionActuelle(pieceDestination);
-                System.out.println("Pièce : " + joueur.getPositionActuelle().getNomPiece());
                 break;
             }
             else {
