@@ -80,17 +80,17 @@ public class Labyrinthe {
 
         /** Création d'ennemis */ //A refaire
         Ennemi ennemi1 = new Ennemi("des serpents 🐍", 5, 5);
-        Ennemi ennemi2 = new Ennemi("des spectres glaciales 👻", 10, 10);
-        Ennemi ennemi3 = new Ennemi("des ", 0, 20);
-        Ennemi ennemi4 = new Ennemi("des chauves-souris hurlantes 🦇🦇", 10, 20);
-        Ennemi ennemi5 = new Ennemi("des loups-garous", 0, 25); // A MODIFIER
-        Ennemi ennemi6 = new Ennemi("des gargouilles de pierre 🗿", 25, 30);
+        Ennemi ennemi2 = new Ennemi("des chauves-souris hurlantes 🦇🦇", 10, 10);
+        Ennemi ennemi3 = new Ennemi("des gargouilles de pierre 🗿 ", 0, 20);
+        Ennemi ennemi4 = new Ennemi("des spectres glaciales 👻", 10, 20);
+        Ennemi ennemi5 = new Ennemi("des morts vivants 💀💀", 0, 25); // A MODIFIER
+        Ennemi ennemi6 = new Ennemi("des plantes carnivores 🥀", 25, 30);
         Ennemi ennemi7 = new Ennemi("des hommes en feu 🔥", 20, 25);
         Ennemi ennemi8 = new Ennemi("une araignée géante 🕷️🕸️", 30, 45);
-        boss = new Ennemi("Gardien du crâne de Cristal", 100, 100);
+        boss = new Ennemi("Le Gardien du crâne de Cristal 🤴", 100, 100);
 
 
-        /** Création des armes */ //A refaire
+        /** Création des armes */
         Arme arme3 = new Arme("Parapluie de combat","Un parapluie ordinaire en apparence, mais qui peut se transformer en bouclier ou en épée.", 8, 3);
         Arme arme4 = new Arme("Baguette Magique", "Une simple baguette de bois qui peut lancer des sorts surprenants, comme transformer les ennemis en grenouilles.", 10, 5);
         Arme arme5 = new Arme("Chausson de Fer","Un chausson confortable à l'extérieur, mais incroyablement solide et lourd, parfait pour balancer sur vos adversaires.", 15, 10);
