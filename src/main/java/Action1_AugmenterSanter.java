@@ -7,7 +7,6 @@ public class Action1_AugmenterSanter extends Action {
     }
 
     /** GETTER */
-
     @Override
     public void exectuer(Aventurier aventurier) {
         int nouvelleSante = aventurier.getVie() + pointsDeSante;

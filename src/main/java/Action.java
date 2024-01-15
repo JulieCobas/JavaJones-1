@@ -1,4 +1,4 @@
 public abstract class Action {
 
-    public abstract  void  exectuer(Aventurier aventurier);
+    public abstract void exectuer(Aventurier aventurier);
 }
