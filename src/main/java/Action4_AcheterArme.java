@@ -30,7 +30,7 @@ public class Action4_AcheterArme extends Action {
         System.out.println("Souhaitez-vous l'acheter? oui/non");
         String reponse;
 
-        while (true) {
+        while (true) { //Faire une boucle jusqu'à ce que le joueur répond correctement à la question
 
             reponse = scanner.nextLine().trim().toLowerCase();
 

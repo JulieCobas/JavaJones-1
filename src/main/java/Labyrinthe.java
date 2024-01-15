@@ -87,7 +87,7 @@ public class Labyrinthe {
         Ennemi ennemi6 = new Ennemi("des plantes carnivores 🥀", 30, 30);
         Ennemi ennemi7 = new Ennemi("des hommes en feu 🔥", 35, 35);
         Ennemi ennemi8 = new Ennemi("une araignée géante 🕷️🕸️", 40, 40);
-        boss = new Ennemi("le Gardien du Crâne de Cristal 🤴", 500, 100);
+        boss = new Ennemi("le Gardien du Crâne de Cristal 🤴", 500, 10);
 
 
         /** Création des armes */
