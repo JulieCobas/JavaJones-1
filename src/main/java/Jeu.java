@@ -78,6 +78,9 @@ public class Jeu {
             }
         }
 
+        System.out.println("\nVoici l'état actuel de votre personnage : surveillez de près votre niveau de vie, vérifiez l'arme que vous maniez actuellement, les dégâts qu'elle inflige\n"
+                +"et gardez un œil sur votre sacoche de pièces d'or.\nQue la chance vous accompagne dans votre quête !\n");
+
         /** Logique de jeu */
         Piece pieceActuelle; //Initialiser la position actuelle de la pièce où se trouve le joueur
         boolean jeuEnCours = true; //Le jeu est par défaut en cours

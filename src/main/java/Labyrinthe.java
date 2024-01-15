@@ -14,7 +14,7 @@ public class Labyrinthe {
         initialisation();
     }
 
-    private void initialisation() {
+    private void initialisation() { //Création du labyrinthe
 
         /** Initialisation des pièces */
         Piece piece1 = new Piece("🕯️🕯️🕯️🕯️      L'ENTRÉE MAUDITE      🕯️🕯️🕯️🕯️",
