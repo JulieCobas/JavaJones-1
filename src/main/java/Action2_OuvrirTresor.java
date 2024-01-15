@@ -30,7 +30,6 @@ public class Action2_OuvrirTresor extends Action {
                 "/______/______/______/______/____\"=._o._; | ;_.--\"o.--\"_/______/______/______/_\n" +
                 "____/______/______/______/______/_____\"=.o|o_.--\"\"___/______/______/______/____\n" +
                 "/______/______/______/______/______/______/______/______/______/______/_____\n" );
-        System.out.println();
         System.out.println("Vous avez trouvé un coffre 💰 : " + coffre.getNom() + ". Il vaut " + coffre.getPiecesGagnees() + " pièces d'or.");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
