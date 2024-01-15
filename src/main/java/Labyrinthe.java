@@ -152,7 +152,7 @@ public class Labyrinthe {
         Action sante5 = new Action1_AugmenterSanter( 60);
         Action rien4 = new Action5_Rien("Rien");
 
-        piece4.ajouterChoix(new Choix("Réciter un serment pour faire tourner l'autel et révéler une cavité.", coffre4, achatArme8));
+        piece4.ajouterChoix(new Choix("Déplacer l'autel et révéler une cavité.", coffre4, achatArme8));
         piece4.ajouterChoix(new Choix("Projeter un plan caché avec les gemmes de l'autel.", combat5, combat6));
         piece4.ajouterChoix(new Choix("Réciter un ancien serment devant les sarcophages",sante5));
         piece4.ajouterChoix(new Choix("Souffler doucement sur la poussière accumulée sur l'autel", rien4));

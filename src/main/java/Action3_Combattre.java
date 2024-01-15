@@ -11,6 +11,8 @@ public class Action3_Combattre extends Action {
     @Override
     public void exectuer(Aventurier aventurier) {
         Scanner scanner = new Scanner(System.in); // Ouvrir le scanner
+
+        ennemi.reinitialiserSante();
         boolean continuerCombat = true; // Variable pour continuer le combat ou arrêter
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
