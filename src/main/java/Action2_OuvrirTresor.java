@@ -11,7 +11,7 @@ public class Action2_OuvrirTresor extends Action {
     public void exectuer(Aventurier aventurier) {
         aventurier.setPorteMonnaie(aventurier.getPorteMonnaie()+ coffre.getPiecesGagnees());
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        System.out.println("Vous avez trouvé un coffre 💰 : " + coffre.getDescriptionCoffre() + ". Il vaut " + coffre.getPiecesGagnees() + " pièces d'or.");
+        System.out.println("Vous avez trouvé un coffre 💰 : " + coffre.getNom() + ". Il vaut " + coffre.getPiecesGagnees() + " pièces d'or.");
         System.out.println("                                                                       \n" +
                 "          |                   |                  |                     |\n" +
                 " _________|________________.=\"\"_;=.______________|_____________________|_______\n" +

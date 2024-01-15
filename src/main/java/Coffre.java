@@ -1,17 +1,15 @@
-public class Coffre {
+public class Coffre extends Item {
 
-    private String descriptionCoffre;
+    /** Variables d'instances */
     private int piecesGagnees;
 
-    public Coffre(String descriptionCoffre, int piecesGagnees) {
-        this.descriptionCoffre = descriptionCoffre;
+    /** Constructeur */
+    public Coffre(String nom, int piecesGagnees) {
+        super(nom);
         this.piecesGagnees = piecesGagnees;
     }
 
-    public String getDescriptionCoffre() {
-        return descriptionCoffre;
-    }
-
+    /** Getter */
     public int getPiecesGagnees() {
         return piecesGagnees;
     }
