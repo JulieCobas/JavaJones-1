@@ -1,5 +1,5 @@
 
-public class Action2_OuvrirTresor implements Action {
+public class Action2_OuvrirTresor extends Action {
 
     private Coffre coffre;
 

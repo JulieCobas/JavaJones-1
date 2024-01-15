@@ -1,4 +1,4 @@
-public class Action5_Rien implements Action {
+public class Action5_Rien extends Action {
 
     private String descriptionRien;
 

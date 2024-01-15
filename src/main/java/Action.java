@@ -1,4 +1,4 @@
-public interface Action {
+public abstract class Action {
 
-    void exectuer(Personnage personnage);
+    public abstract  void  exectuer(Personnage personnage);
 }

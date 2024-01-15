@@ -88,7 +88,7 @@ public class Jeu {
             pieceActuelle.afficherChoixPiece();
 
             Choix choixJoueur = pieceActuelle.demanderChoixJoueur(scanner);
-            for (Action action : choixJoueur.getActions()){
+            for (Action action : choixJoueur.getActions()) {
                 action.exectuer(joueur);
                 joueur.afficherEtat();
                 if (joueur.getBarreDeVie() <= 0){
@@ -97,7 +97,7 @@ public class Jeu {
                 }
                 else if (pieceActuelle.isEstPieceDuBoss() && labyrinthe.getBoss().getEnnemiVie() < 0){
                     System.out.println("Félicitations ! Vous avez vaincu le " + labyrinthe.getBoss().getNom() +" et réussi votre aventure !");
-                    return;
+                    break;
                 }
             }
             joueur.seDeplacer(labyrinthe);

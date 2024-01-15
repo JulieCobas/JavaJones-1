@@ -1,7 +1,6 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class Action3_Combattre implements Action {
+public class Action3_Combattre extends Action {
 
     private Ennemi ennemi;
 

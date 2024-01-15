@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Action4_AcheterArme implements Action {
+public class Action4_AcheterArme extends Action {
 
     private Arme arme;
 

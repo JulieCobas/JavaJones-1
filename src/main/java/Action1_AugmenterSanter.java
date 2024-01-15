@@ -1,4 +1,4 @@
-public class Action1_AugmenterSanter implements Action{
+public class Action1_AugmenterSanter extends Action {
 
     private int pointsDeSante;
 
