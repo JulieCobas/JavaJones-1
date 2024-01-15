@@ -169,7 +169,7 @@ public class Labyrinthe {
 
         piece5.ajouterChoix(new Choix("Rien", rien5));
         piece5.ajouterChoix(new Choix("Achat arme + Vie",achatArme9, sante6));
-        piece5.ajouterChoix(new Choix("Combat + Coffre",combat7, coffre5 ));
+        piece5.ajouterChoix(new Choix("Combat + Coffre",combat7, coffre5));
         piece5.ajouterChoix(new Choix("Achat arme + Vie", achatArme10, sante7));
 
 
