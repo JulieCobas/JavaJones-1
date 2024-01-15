@@ -95,14 +95,14 @@ public class Jeu {
                 action.exectuer(joueur);
                 joueur.afficherEtat();
 
-                if (joueur.verifierEtatDuJeu(joueur,pieceActuelle,labyrinthe)){ //Vrai -> Le joueur n'est pas perdant ni gagnant juste en train de jouer
+                if (joueur.verifierEtatDuJeu(joueur,pieceActuelle,labyrinthe) == false){ //Faux -> Le joueur est perdant ou gagnant de la partie
                  jeuEnCours = false; //Le jeu n'est plus en cours
                  break; // Le jeu s'arrête
                 }
             }
 
-            if(jeuEnCours == true){ //Si le jeu continue alors se déplacer
-            joueur.seDeplacer(labyrinthe);
+            if(jeuEnCours == true){ //Le jeu continue
+            joueur.seDeplacer(labyrinthe); //Il peut se déplacer
             }
         }
        scanner.close();
