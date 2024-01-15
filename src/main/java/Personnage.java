@@ -76,6 +76,21 @@ public class Personnage {
         labyrinthe.deplacementJoueur(this);
     }
 
+
+    /** Vérification du joueur Gagnant/Perdant*/
+    public boolean verifierEtatDuJeu(Personnage joueur, Piece pieceActuelle, Labyrinthe labyrinthe ){
+        if (joueur.getBarreDeVie() <= 0){
+            System.out.println("Vous avez perdu ! Votre aventure se termine ici...");
+            return false; //Le jeu doit se terminer -> Perdu
+        }
+        else if (pieceActuelle.isEstPieceDuBoss() && labyrinthe.getBoss().getEnnemiVie() <= 0){
+            System.out.println("Félicitations ! Vous avez vaincu le " + labyrinthe.getBoss().getNom() + " et réussi votre aventure !");
+            return false; //Le jeu doit se terminer -> Gagné
+        }
+        else {
+            return true; //Le jeu continue -> En cours de partie
+        }
+    }
 }
 
 

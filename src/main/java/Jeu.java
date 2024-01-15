@@ -79,8 +79,10 @@ public class Jeu {
         }
 
         /** Logique de jeu */
-        Piece pieceActuelle;
-        while (joueur.getBarreDeVie() > 0 ){ //Tant que la vie du joueur est supérieur à 0
+        Piece pieceActuelle; //Initialiser la position actuelle de la pièce où se trouve le joueur
+        boolean jeuEnCours = true; //Le jeu est par défaut en cours
+
+        while (jeuEnCours && joueur.getBarreDeVie() > 0 ){ //Tant que la vie du joueur est supérieur à 0
             joueur.afficherEtat();
             pieceActuelle = joueur.getPositionActuelle();
             pieceActuelle.getNomPiece();
@@ -88,19 +90,20 @@ public class Jeu {
             pieceActuelle.afficherChoixPiece();
 
             Choix choixJoueur = pieceActuelle.demanderChoixJoueur(scanner);
+
             for (Action action : choixJoueur.getActions()) {
                 action.exectuer(joueur);
                 joueur.afficherEtat();
-                if (joueur.getBarreDeVie() <= 0){
-                    System.out.println("Vous avez perdu ! Votre aventure se termine ici...");
 
-                }
-                else if (pieceActuelle.isEstPieceDuBoss() && labyrinthe.getBoss().getEnnemiVie() < 0){
-                    System.out.println("Félicitations ! Vous avez vaincu le " + labyrinthe.getBoss().getNom() +" et réussi votre aventure !");
-                    break;
+                if (joueur.verifierEtatDuJeu(joueur,pieceActuelle,labyrinthe)){ //Vrai -> Le joueur n'est pas perdant ni gagnant juste en train de jouer
+                 jeuEnCours = false; //Le jeu n'est plus en cours
+                 break; // Le jeu s'arrête
                 }
             }
+
+            if(jeuEnCours == true){ //Si le jeu continue alors se déplacer
             joueur.seDeplacer(labyrinthe);
+            }
         }
        scanner.close();
     }
