@@ -9,10 +9,10 @@ public class Action1_AugmenterSanter extends Action {
     /** GETTER */
 
     @Override
-    public void exectuer(Personnage personnage) {
-        int nouvelleSante = personnage.getBarreDeVie() + pointsDeSante;
+    public void exectuer(Aventurier aventurier) {
+        int nouvelleSante = aventurier.getVie() + pointsDeSante;
         if (nouvelleSante > 100) {
-            personnage.setBarreDeVie(Personnage.SANTE_MAXIMALE);
+            aventurier.setVie(Aventurier.SANTE_MAXIMALE);
             System.out.println("\nVous avez trouvé de la vie !");
             System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
                     "          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠶⢦⣤⠶⠶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
@@ -35,7 +35,7 @@ public class Action1_AugmenterSanter extends Action {
             System.out.println();
         }
         else {
-            personnage.setBarreDeVie(nouvelleSante);
+            aventurier.setVie(nouvelleSante);
             System.out.println("\nVous avez trouvé de la vie !");
             System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
                     "          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠶⢦⣤⠶⠶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +

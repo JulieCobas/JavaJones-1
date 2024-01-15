@@ -7,7 +7,7 @@ public class Action5_Rien extends Action {
     }
 
     @Override
-    public void exectuer(Personnage personnage) {
+    public void exectuer(Aventurier aventurier) {
         System.out.println("Vous n'avez rien obtenu !");
     }
 }

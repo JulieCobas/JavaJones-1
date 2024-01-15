@@ -220,7 +220,7 @@ public class Labyrinthe {
         return null;
     }
 
-    public void deplacementJoueur(Personnage joueur){
+    public void deplacementJoueur(Aventurier joueur){
         Scanner scanner = new Scanner(System.in);
         Piece pieceActuelle = joueur.getPositionActuelle();
         Piece pieceDestination = null;

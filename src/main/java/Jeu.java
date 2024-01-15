@@ -57,8 +57,8 @@ public class Jeu {
         }
 
         /** Création du joueur, position de départ, arme de départ */
-        Personnage joueur = new Personnage(nomJoueur);
-        System.out.println("\nBienvenue dans la quête " + joueur.getNomJoueur());
+        Aventurier joueur = new Aventurier(nomJoueur);
+        System.out.println("\nBienvenue dans la quête " + joueur.getNom());
         joueur.setPositionActuelle(labyrinthe.getPiece(1));
 
         /** Choix de l'arme de début */
@@ -82,7 +82,7 @@ public class Jeu {
         Piece pieceActuelle; //Initialiser la position actuelle de la pièce où se trouve le joueur
         boolean jeuEnCours = true; //Le jeu est par défaut en cours
 
-        while (jeuEnCours && joueur.getBarreDeVie() > 0 ){ //Tant que la vie du joueur est supérieur à 0
+        while (jeuEnCours && joueur.getVie() > 0 ){ //Tant que la vie du joueur est supérieur à 0
             joueur.afficherEtat();
             pieceActuelle = joueur.getPositionActuelle();
             pieceActuelle.getNomPiece();

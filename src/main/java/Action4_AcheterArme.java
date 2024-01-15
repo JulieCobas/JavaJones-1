@@ -10,7 +10,7 @@ public class Action4_AcheterArme extends Action {
     }
 
     @Override
-    public void exectuer(Personnage personnage) {
+    public void exectuer(Aventurier aventurier) {
         Scanner scanner = new Scanner(System.in);
 
         // Mise en scène de l'offre d'achat
@@ -35,9 +35,9 @@ public class Action4_AcheterArme extends Action {
             reponse = scanner.nextLine().trim().toLowerCase();
 
             if (reponse.equals("oui")) {
-                if (personnage.getPorteMonnaie() >= arme.getCout()) {
-                    personnage.setPorteMonnaie(personnage.getPorteMonnaie() - arme.getCout());
-                    personnage.setArme(arme);
+                if (aventurier.getPorteMonnaie() >= arme.getCout()) {
+                    aventurier.setPorteMonnaie(aventurier.getPorteMonnaie() - arme.getCout());
+                    aventurier.setArme(arme);
                     System.out.println("Le Maître d'Armes hoche la tête en signe d'approbation.");
                     System.out.println("Vous avez acquis : " + arme.getNom() + " !");
                     break;

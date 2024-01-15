@@ -9,37 +9,37 @@ public class Action3_Combattre extends Action {
     }
 
     @Override
-    public void exectuer(Personnage personnage) {
+    public void exectuer(Aventurier aventurier) {
         Scanner scanner = new Scanner(System.in); // Ouvrir le scanner
         boolean continuerCombat = true; // Variable pour continuer le combat ou arrêter
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("            💥    ~       Combat d'ennemis        ~     🗡️ ");
-        System.out.println("\nCombat avec " + ennemi.getNom() + " || Point de vie : " + ennemi.getEnnemiVie() + " / Dégats : " + ennemi.getDegats());
+        System.out.println("\nCombat avec " + ennemi.getNom() + " || Point de vie : " + ennemi.getVie() + " / Dégats : " + ennemi.getDegats());
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        while (personnage.getBarreDeVie() > 0 && ennemi.getEnnemiVie() > 0 && continuerCombat) { // Tant que le joueur et l'ennemi ont de la vie
+        while (aventurier.getVie() > 0 && ennemi.getVie() > 0 && continuerCombat) { // Tant que le joueur et l'ennemi ont de la vie
 
             System.out.println("Voulez-vous attaquer (a) ou fuir (f) ?");
             String choix = scanner.nextLine().trim().toLowerCase(); // Lire la saisie manuelle
 
             if (choix.equals("a")) { // Attaque
-                ennemi.setEnnemiVie(ennemi.getEnnemiVie() - personnage.getArme().getDegats()); // Réduire la vie de l'ennemi
+                ennemi.setVie(ennemi.getVie() - aventurier.getArme().getDegats()); // Réduire la vie de l'ennemi
 
-                if (ennemi.getEnnemiVie() <= 0) { // Si l'ennemi est vaincu
+                if (ennemi.getVie() <= 0) { // Si l'ennemi est vaincu
                     System.out.println("\nVous avez vaincu " + ennemi.getNom() + " !");
                     break;
                 }
 
                 else {
-                    System.out.println("\nL'ennemi est toujours vivant. Dégâts restants : " + ennemi.getEnnemiVie() + " ❗");
+                    System.out.println("\nL'ennemi est toujours vivant. Dégâts restants : " + ennemi.getVie() + " ❗");
                 }
 
                 // Appliquer les dégâts de l'ennemi au joueur
-                personnage.setBarreDeVie(personnage.getBarreDeVie() - ennemi.getDegats());
+                aventurier.setVie(aventurier.getVie() - ennemi.getDegats());
                 System.out.println("\nVous avez subi " + ennemi.getDegats() + " points de dégats. 🔻🧡");
-                personnage.afficherEtat();
+                aventurier.afficherEtat();
 
-                if (personnage.getBarreDeVie() <= 0) { // Si le joueur est vaincu
+                if (aventurier.getVie() <= 0) { // Si le joueur est vaincu
                     System.out.println("\nVous avez été vaincu par " + ennemi.getNom() + "!");
                     break;
                 }
