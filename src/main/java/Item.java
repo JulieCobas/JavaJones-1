@@ -4,7 +4,6 @@ public abstract class Item {
     protected String nom;
 
     /** Constructeur */
-
     public Item(String nom){
         this.nom = nom;
     }
