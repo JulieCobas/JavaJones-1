@@ -87,7 +87,7 @@ public class Piece {
     }
 
     public Choix demanderChoixJoueur(Scanner scanner){
-        System.out.println("\nVeuillez choisir une option (entrez le numéro 1/2/3/4)");
+        System.out.println("\nQuel choix faites-vous ? (entrez le numéro 1/2/3/4)");
         int choixJoueur;
         try {
             choixJoueur = Integer.parseInt(scanner.nextLine().trim());
