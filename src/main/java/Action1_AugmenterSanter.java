@@ -54,7 +54,7 @@ public class Action1_AugmenterSanter extends Action {
                     "          ⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⡀⠀⠀⠀⠀⠀⠀⢀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀\n" +
                     "          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠶⣤⣤⣤⡤⠶⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"+
                     "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀             \n");
-            System.out.println("\nVotre santé a été augmentée de " + pointsDeSante + "points de vie !");
+            System.out.println("\nVotre santé a été augmentée de " + pointsDeSante + " points de vie !");
         }
     }
 
