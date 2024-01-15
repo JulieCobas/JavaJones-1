@@ -111,10 +111,10 @@ public class Labyrinthe {
         Action achatArme4 = new Action4_AcheterArme(arme4);
         Action rien1 = new Action5_Rien("Rien");
 
-        piece1.ajouterChoix(new Choix("Gagner un trésor et combat", combat1, coffre1));
-        piece1.ajouterChoix(new Choix("Vie + achat arme", sante1, achatArme3));
-        piece1.ajouterChoix(new Choix("Combat + Achat arme", combat2, achatArme4));
-        piece1.ajouterChoix(new Choix("Rien", rien1));
+        piece1.ajouterChoix(new Choix("Dessiner les ombres pour révéler une porte cachée.", combat1, coffre1));
+        piece1.ajouterChoix(new Choix("Écouter le rythme des gouttes d'eau pour trouver un levier secret.", sante1, achatArme3));
+        piece1.ajouterChoix(new Choix("Assembler un puzzle de fossiles révélant un code.", combat2, achatArme4));
+        piece1.ajouterChoix(new Choix("Utiliser la torche pour découvrir une inscription cachée.", rien1));
 
         /** Pièce 2 - Le Jardin des statutes */
         Action sante2 = new Action1_AugmenterSanter( 30);
@@ -125,10 +125,10 @@ public class Labyrinthe {
         Action combat3 = new Action3_Combattre(ennemi3);
         Action coffre2 = new Action2_OuvrirTresor( gain2);
 
-        piece2.ajouterChoix(new Choix("Vie + Achat armes", sante2, achatArme5));
-        piece2.ajouterChoix(new Choix("Rien", rien2));
-        piece2.ajouterChoix(new Choix("Vie + Achat armes", sante3, achatArme6));
-        piece2.ajouterChoix(new Choix("Combat + Trésor", combat3, coffre2));
+        piece2.ajouterChoix(new Choix("Projeter la lumière lunaire sur les statues pour dévoiler un chemin.", sante2, achatArme5));
+        piece2.ajouterChoix(new Choix("Réarranger des fleurs pour ouvrir une grotte secrète.", rien2));
+        piece2.ajouterChoix(new Choix("Raconter un conte devant une statue pour révéler quelque chose...", sante3, achatArme6));
+        piece2.ajouterChoix(new Choix("Faire pivoter une statue pour les aligner aux autres.", combat3, coffre2));
 
 
         /** Piece 3 - La Chambre des ombres chuchotantes  */
@@ -138,10 +138,10 @@ public class Labyrinthe {
         Action rien3 = new Action5_Rien("Rien");
         Action achatArme7 = new Action4_AcheterArme(arme7);
 
-        piece3.ajouterChoix(new Choix("Vie + Trésor", sante4,coffre3));
-        piece3.ajouterChoix(new Choix("Combat", combat4));
-        piece3.ajouterChoix(new Choix("Rien", rien3));
-        piece3.ajouterChoix(new Choix("Achat arme", achatArme7));
+        piece3.ajouterChoix(new Choix("Suivre les murmures jusqu'à une fresque spécifique qui cache un bouton secret.", sante4,coffre3));
+        piece3.ajouterChoix(new Choix("Utiliser le flamboiement des bougies pour révéler des symboles cachés sur les murs.", combat4));
+        piece3.ajouterChoix(new Choix("Chercher sous le tapis pour dévoiler une trappe.", rien3));
+        piece3.ajouterChoix(new Choix("Ouvrir la bibliothèque menant vers une salle cachée.", achatArme7));
 
 
         /** Piece 4 - Le Sanctuaire oublié */
@@ -152,10 +152,10 @@ public class Labyrinthe {
         Action sante5 = new Action1_AugmenterSanter( 60);
         Action rien4 = new Action5_Rien("Rien");
 
-        piece4.ajouterChoix(new Choix("Achat arme + coffre", coffre4, achatArme8));
-        piece4.ajouterChoix(new Choix("Combat + Combat", combat5, combat6));
-        piece4.ajouterChoix(new Choix("Vie",sante5));
-        piece4.ajouterChoix(new Choix("Rien", rien4));
+        piece4.ajouterChoix(new Choix("Réciter un serment pour faire tourner l'autel et révéler une cavité.", coffre4, achatArme8));
+        piece4.ajouterChoix(new Choix("Projeter un plan caché avec les gemmes de l'autel.", combat5, combat6));
+        piece4.ajouterChoix(new Choix("Réciter un ancien serment devant les sarcophages",sante5));
+        piece4.ajouterChoix(new Choix("Souffler doucement sur la poussière accumulée sur l'autel", rien4));
 
 
         /**  Piece 5 - La Gallerie des Illusions */
@@ -167,10 +167,10 @@ public class Labyrinthe {
         Action achatArme10 = new Action4_AcheterArme(arme10);
         Action sante7 = new Action1_AugmenterSanter( 60);
 
-        piece5.ajouterChoix(new Choix("Rien", rien5));
-        piece5.ajouterChoix(new Choix("Achat arme + Vie",achatArme9, sante6));
-        piece5.ajouterChoix(new Choix("Combat + Coffre",combat7, coffre5));
-        piece5.ajouterChoix(new Choix("Achat arme + Vie", achatArme10, sante7));
+        piece5.ajouterChoix(new Choix("Marcher en suivant un reflet qui change de place pour découvrir une dalle secrète.", rien5));
+        piece5.ajouterChoix(new Choix("Ajuster l'angle des miroirs pour révéler un code sur le mur.",achatArme9, sante6));
+        piece5.ajouterChoix(new Choix("Reproduire une séquence de couleurs observée dans les miroirs pour débloquer une porte.",combat7, coffre5));
+        piece5.ajouterChoix(new Choix("Trouver un miroir qui montre le passé de la galerie, révélant un indice caché.", achatArme10, sante7));
 
 
         /** Piece 6 - La Salle du Trône du Gardien */
@@ -180,10 +180,11 @@ public class Labyrinthe {
         Action combat8 = new Action3_Combattre(ennemi8);
         Action combatBoss = new Action3_Combattre(boss);
 
-        piece6.ajouterChoix(new Choix("Achat arme + Boss",achatArme11, combatBoss));
-        piece6.ajouterChoix(new Choix("Vie + Boss", sante8, combatBoss ));
-        piece6.ajouterChoix(new Choix("Rien + Boss",rien6, combatBoss));
-        piece6.ajouterChoix(new Choix("Combat + Boss",combat8, combatBoss));
+        piece6.ajouterChoix(new Choix("Utiliser la lumière des fenêtres pour lire des inscriptions au sol.",achatArme11, combatBoss));
+        piece6.ajouterChoix(new Choix("Trouver un mécanisme derrière le trône révélant un passage.", sante8, combatBoss ));
+        piece6.ajouterChoix(new Choix("Réciter le nom du gardien en face du trône pour ouvrir une cachette secrète.",rien6, combatBoss));
+        piece6.ajouterChoix(new Choix("Examiner les joyaux du trône pour activer un mécanisme sous le siège.",combat8, combatBoss));
+
 
         /**  Connexions entre les pièces */
         piece1.ajouterConnexion(piece2);// Droite
