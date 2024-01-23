@@ -1,17 +1,21 @@
 public class Action1_AugmenterSanter extends Action {
 
-    private int pointsDeSante;
+    private int pointsDeVie;
 
-    public Action1_AugmenterSanter(int pointsDeSante){
-        this.pointsDeSante = pointsDeSante;
+    public Action1_AugmenterSanter(int pointsDeVie){
+        this.pointsDeVie = pointsDeVie;
     }
 
     /** GETTER */
     @Override
     public void exectuer(Aventurier aventurier) {
-        int nouvelleSante = aventurier.getVie() + pointsDeSante;
-        if (nouvelleSante > 100) {
-            aventurier.setVie(Aventurier.SANTE_MAXIMALE);
+
+        //Récupérer la nouvelle vie pour l'ajouter à celle actuelle du joueur
+        int nouvelleSante = aventurier.getVie() + pointsDeVie;
+
+        //Si la nouvelle vie obtenue du joueur dépasse la santé maximale
+        if (nouvelleSante > aventurier.SANTE_MAXIMALE) {
+            aventurier.setVie(aventurier.SANTE_MAXIMALE);
             System.out.println("\nVous avez trouvé de la vie !");
             System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
                     "          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠶⢦⣤⠶⠶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
@@ -53,7 +57,7 @@ public class Action1_AugmenterSanter extends Action {
                     "          ⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⡀⠀⠀⠀⠀⠀⠀⢀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀\n" +
                     "          ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠶⣤⣤⣤⡤⠶⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"+
                     "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀             \n");
-            System.out.println("\nVotre santé a été augmentée de " + pointsDeSante + " points de vie !");
+            System.out.println("\nVotre santé a été augmentée de " + pointsDeVie + " points de vie !");
         }
     }
 
