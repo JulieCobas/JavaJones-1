@@ -185,30 +185,11 @@ public class Labyrinthe {
         piece6.ajouterChoix(new Choix("Réciter le nom du gardien en face du trône pour ouvrir une cachette secrète.",rien6, combatBoss));
         piece6.ajouterChoix(new Choix("Examiner les joyaux du trône pour activer un mécanisme sous le siège.",combat8, combatBoss));
 
-
-        /**  Connexions entre les pièces */
-        piece1.ajouterConnexion(piece2);// Droite
-        piece1.ajouterConnexion(piece3); //Gauche
-
-        piece2.ajouterConnexion(piece4);//Tout droit
-        piece2.ajouterConnexion(piece1);//En arrière
-
-        piece3.ajouterConnexion(piece5);//Tout droit
-        piece3.ajouterConnexion(piece1);//En arrière
-
-        piece4.ajouterConnexion(piece2); //En arrière
-
-        piece5.ajouterConnexion(piece6); //Tout droit
-        piece5.ajouterConnexion(piece1); //En arrière
-
-        piece6.ajouterConnexion(piece5); //En arrière
-
         /** Ajout des pièces à la liste */
         pieces.addAll(Arrays.asList(piece1, piece2, piece3, piece4, piece5, piece6));
     }
 
 
-    /** Récupérer les caractéristiques du Bosss instancié */
     public Ennemi getBoss(){
         return boss;
     }
@@ -226,14 +207,12 @@ public class Labyrinthe {
         Scanner scanner = new Scanner(System.in);
         Piece pieceActuelle = joueur.getPositionActuelle();
         Piece pieceDestination = null;
-
         while (true) {
             System.out.println(">------------------------------------------------------------------------------------------------>");
             System.out.println(" \uD83D\uDEAA \uD83C\uDFC3 Dans quelle direction voulez-vous aller ? (droite/gauche/devant/arrière)");
             System.out.println(">------------------------------------------------------------------------------------------------>");
 
             String direction = scanner.nextLine().trim().toLowerCase();
-
             switch (direction) {
                 case "droite":
                     // Déplacement vers la droite
@@ -271,23 +250,20 @@ public class Labyrinthe {
                         pieceDestination = getPiece(5);
                     }
                     break;
-
-                //Message d'erreur si l'utilisateur a saisi
                 default:
                     System.out.println("\nDirection inconnue. Veuillez réessayer.");
                     continue;
             }
 
-            // Déplacement si la destination est valide
-            if (pieceDestination != null && pieceActuelle.estConnecteeAvec(pieceDestination)) {
+            // Déplacement si la destination n'est pas nulle
+            if (pieceDestination != null) {
                 joueur.setPositionActuelle(pieceDestination);
                 break;
             }
             //Cul de sac de la pièce 4
-            else if (pieceActuelle.getNumeroPiece() == 4){
+            if (pieceActuelle.getNumeroPiece() == 4){
                 System.out.println("\nVous êtes bloquée. On ne peut pas aller plus loin. Retourner en arrière...");
                 }
-
             //Si la direction est impossible
             else {System.out.println("\nDéplacement impossible dans cette direction. ❌ ");
             }

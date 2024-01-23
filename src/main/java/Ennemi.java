@@ -18,7 +18,5 @@ public class Ennemi extends Personnage {
         setVie(santeInitiale);
     }
 
-    public void attaquerJoueur(){
-        joueur.setVie(joueur.getVie()-getDegats());
-    }
+
 }
