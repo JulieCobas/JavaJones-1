@@ -71,11 +71,13 @@ public class Aventurier extends Personnage {
 
     /** Vérification du joueur Gagnant/Perdant*/
     public boolean verifierEtatDuJeu(Aventurier joueur, Piece pieceActuelle, Labyrinthe labyrinthe ){
+        //Si la vie du joueur est égale ou supérieur à 0
         if (getVie() <= 0){
             System.out.println("Vous avez perdu ! Votre aventure se termine ici...");
             return false; //Le jeu doit se terminer -> Perdu
         }
-        else if (pieceActuelle.isEstPieceDuBoss() && labyrinthe.getBoss().getVie() <= 0){
+        //Récupérer la salle actuelle du Boss
+        else if (pieceActuelle.EstPieceDuBoss() && labyrinthe.getBoss().getVie() <= 0){
             System.out.println("Félicitations ! Vous avez vaincu le " + labyrinthe.getBoss().getNom() + " et réussi votre aventure !");
             return false; //Le jeu doit se terminer -> Gagné
         }

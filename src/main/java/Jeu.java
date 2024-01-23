@@ -10,8 +10,6 @@ public class Jeu {
         /** Ouverture du scanner pour la saisie */
         Scanner scanner = new Scanner(System.in);
 
-        boolean aVaincuLeBoss = false;
-
         /** Message d'introduction */
         System.out.println("\n===========================================================");
         System.out.println(" Aventure de JavaJones : La Quête du Crâne de Cristal");
@@ -85,19 +83,26 @@ public class Jeu {
         Piece pieceActuelle; //Initialiser la position actuelle de la pièce où se trouve le joueur
         boolean jeuEnCours = true; //Le jeu est par défaut en cours
 
-        while (jeuEnCours && joueur.getVie() > 0 ){ //Tant que la vie du joueur est supérieur à 0
-            joueur.afficherEtat();
+        //Tant que la vie du joueur est supérieur à 0
+        while (jeuEnCours && joueur.getVie() > 0 ){
+            joueur.afficherEtat(); //Toujours afficher la barre d'état du joueur avant l'apparition de la salle
+
+
+            //En fonction de la pièce actuelle récupérer la nouvelle position du joueur, le nom de la pièce, la description et les choix possibles dans la pièce actuelle
             pieceActuelle = joueur.getPositionActuelle();
             pieceActuelle.getNomPiece();
             pieceActuelle.afficherDescriptionPiece();
             pieceActuelle.afficherChoixPiece();
 
+            //Demander quel choix veut faire le joueur dans la pièce
             Choix choixJoueur = pieceActuelle.demanderChoixJoueur(scanner);
 
+            //Faire défiler les actions dans le choix sélectionné et les exécuter
             for (Action action : choixJoueur.getActions()) {
                 action.exectuer(joueur);
                 joueur.afficherEtat();
 
+                // Si le joueur n'a plus de vie
                 if (joueur.verifierEtatDuJeu(joueur,pieceActuelle,labyrinthe) == false){ //Faux -> Le joueur est perdant ou gagnant de la partie
                  jeuEnCours = false; //Le jeu n'est plus en cours
                  break; // Le jeu s'arrête

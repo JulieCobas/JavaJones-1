@@ -208,6 +208,7 @@ public class Labyrinthe {
     }
 
 
+    /** Récupérer les caractéristiques du Bosss instancié */
     public Ennemi getBoss(){
         return boss;
     }
@@ -225,12 +226,14 @@ public class Labyrinthe {
         Scanner scanner = new Scanner(System.in);
         Piece pieceActuelle = joueur.getPositionActuelle();
         Piece pieceDestination = null;
+
         while (true) {
             System.out.println(">------------------------------------------------------------------------------------------------>");
             System.out.println(" \uD83D\uDEAA \uD83C\uDFC3 Dans quelle direction voulez-vous aller ? (droite/gauche/devant/arrière)");
             System.out.println(">------------------------------------------------------------------------------------------------>");
 
             String direction = scanner.nextLine().trim().toLowerCase();
+
             switch (direction) {
                 case "droite":
                     // Déplacement vers la droite
@@ -268,6 +271,8 @@ public class Labyrinthe {
                         pieceDestination = getPiece(5);
                     }
                     break;
+
+                //Message d'erreur si l'utilisateur a saisi
                 default:
                     System.out.println("\nDirection inconnue. Veuillez réessayer.");
                     continue;
@@ -282,6 +287,7 @@ public class Labyrinthe {
             else if (pieceActuelle.getNumeroPiece() == 4){
                 System.out.println("\nVous êtes bloquée. On ne peut pas aller plus loin. Retourner en arrière...");
                 }
+
             //Si la direction est impossible
             else {System.out.println("\nDéplacement impossible dans cette direction. ❌ ");
             }

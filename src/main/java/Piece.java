@@ -39,7 +39,7 @@ public class Piece {
         return choixList;
     }
 
-    public boolean isEstPieceDuBoss(){
+    public boolean EstPieceDuBoss(){
         return estPieceDuBoss;
     }
 
