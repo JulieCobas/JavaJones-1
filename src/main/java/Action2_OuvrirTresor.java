@@ -3,13 +3,19 @@ public class Action2_OuvrirTresor extends Action {
 
     private Coffre coffre;
 
+    //Construction d'une action pour ouvrir un coffre (de pièces)
     public Action2_OuvrirTresor(Coffre coffre) {
         this.coffre = coffre;
     }
 
+    //Récupération de l'aventurier en paramètre pour effectuer les changements
     @Override
     public void exectuer(Aventurier aventurier) {
+
+        //Modification du porte-monnaie du joueur en fonction de l'état actuel de son porte monnaie et ce que contient le coffre
         aventurier.setPorteMonnaie(aventurier.getPorteMonnaie()+ coffre.getPiecesGagnees());
+
+        // Mise en scène de l'offre de l'obtention d'un coffre de pièces
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("                                                                       \n" +
                 "          |                   |                  |                     |\n" +
