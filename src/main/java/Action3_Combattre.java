@@ -37,7 +37,7 @@ public class Action3_Combattre extends Action {
                 }
 
                 // Appliquer les dégâts de l'ennemi au joueur
-                aventurier.setVie(aventurier.getVie() - ennemi.getDegats());
+                ennemi.attaquerJoueur();
                 System.out.println("\nVous avez subi " + ennemi.getDegats() + " points de dégats. 🔻🧡");
                 aventurier.afficherEtat();
 

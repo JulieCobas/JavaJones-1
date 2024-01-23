@@ -2,6 +2,7 @@ public class Ennemi extends Personnage {
 
     private int degats;
     private int santeInitiale;
+    private Aventurier joueur;
 
     public Ennemi(String nom, int vie, int degats) {
         super(nom, vie);
@@ -17,4 +18,7 @@ public class Ennemi extends Personnage {
         setVie(santeInitiale);
     }
 
+    public void attaquerJoueur(){
+        joueur.setVie(joueur.getVie()-getDegats());
+    }
 }

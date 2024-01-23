@@ -104,7 +104,7 @@ public class Jeu {
                 }
             }
 
-            if(jeuEnCours == true){ //Le jeu continue
+            if(jeuEnCours == true){ //Le jeu continu
             joueur.seDeplacer(labyrinthe); //Il peut se déplacer
             }
         }
