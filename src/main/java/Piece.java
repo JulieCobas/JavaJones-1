@@ -35,16 +35,8 @@ public class Piece {
         return numeroPiece;
     }
 
-    public List<Choix> getChoixList() {
-        return choixList;
-    }
-
     public boolean isEstPieceDuBoss(){
         return estPieceDuBoss;
-    }
-
-    public List<Piece> getConnexions() {
-        return connexions; // Getter pour les connexions
     }
 
     /** SETTER */

@@ -13,6 +13,5 @@ public class Coffre extends Item {
     public int getPiecesGagnees() {
         return piecesGagnees;
     }
-
 }
 

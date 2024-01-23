@@ -3,7 +3,11 @@ import java.util.Scanner;
 public class Action4_AcheterArme extends Action {
 
     private Arme arme;
+    private Aventurier joueur;
 
+    private static final String ACHAT = "oui";
+    private static final String NEPASACHETER = "non";
+    private Scanner scanner;
 
     public Action4_AcheterArme(Arme arme) {
         this.arme = arme;
@@ -11,7 +15,8 @@ public class Action4_AcheterArme extends Action {
 
     @Override
     public void exectuer(Aventurier aventurier) {
-        Scanner scanner = new Scanner(System.in);
+
+        scanner = new Scanner(System.in);
 
         // Mise en scène de l'offre d'achat
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -32,27 +37,36 @@ public class Action4_AcheterArme extends Action {
 
         while (true) { //Faire une boucle jusqu'à ce que le joueur répond correctement à la question
 
-            reponse = scanner.nextLine().trim().toLowerCase();
+            //Demander le choix à l'utilisateur
+            reponse = joueur.obtenirChoixUtilisateur();
 
-            if (reponse.equals("oui")) {
+            //Achat d'une arme
+            if (reponse.equals(ACHAT)) {
+
+                //Si le joueur a le nombre suffisant de pièces pour acheter l'arme
                 if (aventurier.getPorteMonnaie() >= arme.getCout()) {
                     aventurier.setPorteMonnaie(aventurier.getPorteMonnaie() - arme.getCout());
                     aventurier.setArme(arme);
                     System.out.println("Le Maître d'Armes hoche la tête en signe d'approbation.");
                     System.out.println("Vous avez acquis : " + arme.getNom() + " !");
                     break;
-                } else {
+                }
+                //Si le joueur veut acheter mais il n'a pas assez d'argent
+                else {
                     System.out.println("\nLe Maître d'Armes soupire 😔: « Tes pièces ne suffisent pas... Repasse me voir plus tard »\n");
                     break;
                 }
-            } else if (reponse.equals("non")) {
+            }
+            //Ne pas acheter d'arme
+            else if (reponse.equals(NEPASACHETER)) {
                 System.out.println("«\nUn choix sage, ou peut-être prudent... » 🤠 murmure le Maître d'Armes.");
                 break;
-            } else {
+            }
+
+            //Réponse de l'utilisateur incorrecte
+            else {
                 System.out.println("\nLe Maître d'Armes vous regarde perplexe 😕: « Je n'ai pas compris votre réponse... Veuillez répondre par 'oui' ou 'non'.»\n");
             }
         }
-
     }
-
 }

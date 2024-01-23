@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Aventurier extends Personnage {
 
     /** Variables d'instances */
@@ -5,6 +7,7 @@ public class Aventurier extends Personnage {
     private int pieces;
     public static final int SANTE_MAXIMALE = 100;
     private Piece positionActuelle;
+    private Scanner scanner;
 
     /** CONSTRUCTEUR */
     public Aventurier(String nom){
@@ -83,6 +86,15 @@ public class Aventurier extends Personnage {
             return true; //Le jeu continue -> En cours de partie
         }
     }
+
+    /** Récupérer le choix de l'utilisateur et nettoie la saisie (sans espaces + convertir en minuscule */
+    public String obtenirChoixUtilisateur(){
+        return scanner.nextLine().trim().toLowerCase();
+    }
+
+
+    /** Attaquer un ennemi*/
+
 }
 
 
